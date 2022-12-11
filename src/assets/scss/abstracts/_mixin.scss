@@ -1,0 +1,54 @@
+@mixin blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+}
+
+@mixin ir {
+    font-size: 1rem;
+    text-indent: -999999rem;
+}
+
+@mixin clearfix {
+    &::after {
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin ellipsis($lines: 1) {
+    @if ($lines==1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } @else {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: $lines;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@mixin posiCenter($areaPosi) {
+    @if $areaPosi == 'va' {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if $areaPosi == 'a' {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    } @else if $areaPosi == 'v' {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

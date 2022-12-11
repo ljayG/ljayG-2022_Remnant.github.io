@@ -1,0 +1,117 @@
+#header {
+    position: fixed;
+    width: 100%;
+    height: calc($nav-height / 2);
+    top: 0;
+    background-color: $white;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        background-image: linear-gradient(to right, $color-primary, $color-secondary);
+        z-index: 2;
+    }
+
+    .logo {
+        display: block;
+        height: 100%;
+
+        a {
+            display: block;
+            position: relative;
+            width: calc(194px / 2);
+            height: 100%;
+            margin: auto;
+
+            span {
+                @include ir();
+                @include posiCenter(va);
+                display: block;
+                width: 100%;
+                height: calc(47px / 2);
+                background: url('../images/common/logo.svg') no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+
+    .head-menuBtn {
+        position: absolute;
+        display: block;
+        width: calc(85px / 2);
+        height: 100%;
+        top: 0;
+
+        &::before,
+        &::after {
+            @include posiCenter('va');
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-color: $gray;
+            border-radius: 50%;
+        }
+
+        &::before {
+            margin-left: -11px;
+        }
+
+        span {
+            @include posiCenter('va');
+            @include ir();
+            display: block;
+            width: 8px;
+            height: 8px;
+            margin-left: 12rem;
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 8px;
+                height: 2px;
+                top: 50%;
+                left: 50%;
+                margin: -1rem 0 0 -4rem;
+                background-color: $color-primary;
+                transition: 0.2s all linear;
+            }
+
+            &::before {
+                transform: rotate(90deg);
+            }
+
+            @at-root .mo-menuOpen & {
+                &::before {
+                    opacity: 0;
+                    transform: rotate(0deg);
+                }
+
+                &::after {
+                    background-color: $color-secondary;
+                }
+            }
+        }
+    }
+
+    .head-snsBtn {
+        @include posiCenter('v');
+        display: block;
+        width: 36px;
+        padding: 0 7px;
+        right: 8px;
+        color: $navy;
+        font-size: 12rem;
+        font-weight: 700;
+        line-height: 19rem;
+        border: 1px solid $color-primary;
+        border-radius: 10px;
+        text-align: center;
+    }
+}

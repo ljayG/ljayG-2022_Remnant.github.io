@@ -1,0 +1,113 @@
+.mo-nav {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - 42.5px);
+    top: 42.5px;
+
+    .nav-wrap {
+        width: 256px;
+        height: 100%;
+        overflow-y: auto;
+
+        .depth1 {
+            & > li {
+                position: relative;
+                border-bottom: 1px solid $gray2;
+
+                .depalpha {
+                    a {
+                        position: relative;
+                        display: block;
+                        padding: 17rem 26rem 17rem 28rem;
+                        font-size: 16rem;
+                        font-weight: 700;
+                        color: $black;
+                        line-height: 1;
+
+                        strong {
+                            position: relative;
+                            display: inline-block;
+                            line-height: 1;
+                            z-index: 1;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                display: block;
+                                width: 0;
+                                height: 3px;
+                                bottom: 0;
+                                background-color: $color-secondary;
+                                transition: 0.2s all linear;
+                                z-index: -1;
+                            }
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            display: block;
+                            width: 10.5px;
+                            height: 7px;
+                            top: 50%;
+                            right: 24rem;
+                            margin-top: -3.5rem;
+                            background: url('../images/common/ico_arr.png') no-repeat;
+                            background-size: contain;
+                            transition: 0.2s all linear;
+                        }
+                    }
+                }
+
+                .depth2 {
+                    padding: 5.5rem 0;
+                    background-color: $lightGray;
+                    border-top: 1px solid $gray2;
+
+                    & > li {
+                        & > a {
+                            display: block;
+                            padding: 13rem 10rem 13rem 30rem;
+                            font-size: 14rem;
+                            font-weight: 700;
+                            color: $black;
+                            line-height: 1;
+
+                            span {
+                                position: relative;
+                                display: inline-block;
+                                line-height: 1;
+
+                                &::before {
+                                    content: '+';
+                                    display: inline-block;
+                                    margin-right: 4rem;
+                                    font-size: 14rem;
+                                    font-weight: 700;
+                                    color: $color-secondary;
+                                    line-height: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    .depalpha {
+                        a {
+                            &::after {
+                                transform: rotate(180deg);
+                            }
+
+                            strong {
+                                &::after {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

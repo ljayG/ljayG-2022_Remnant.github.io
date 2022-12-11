@@ -1,0 +1,4 @@
+**/.git
+**/*.css
+**/*.min.js
+.vscode/*.json
