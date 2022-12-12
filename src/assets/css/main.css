@@ -568,9 +568,18 @@ legend,
   top: 42.5px;
 }
 .mo-nav .nav-wrap {
+  position: relative;
   width: 256px;
   height: 100%;
+  background-color: #fff;
   overflow-y: auto;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  -webkit-transform: translateX(-256px);
+          transform: translateX(-256px);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
 }
 .mo-nav .nav-wrap .depth1 > li {
   position: relative;
@@ -650,4 +659,45 @@ legend,
 }
 .mo-nav .nav-wrap .depth1 > li.active .depalpha a strong::after {
   width: 100%;
+}
+.mo-nav .mofix-shadow {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  z-index: 1;
+}
+.mo-nav .mofix-shadow .mo-btnClose {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  left: 266px;
+}
+.mo-nav .mofix-shadow .mo-btnClose span {
+  font-size: 1rem;
+  text-indent: -999999rem;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  background: url("../images/common/btn_close.png") no-repeat;
+  background-size: contain;
+}
+.mo-menuOpen .nav-wrap {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.mo-menuOpen .mofix-shadow {
+  opacity: 1;
+  visibility: visible;
 }

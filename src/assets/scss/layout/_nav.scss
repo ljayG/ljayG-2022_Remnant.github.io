@@ -5,9 +5,16 @@
     top: 42.5px;
 
     .nav-wrap {
+        position: relative;
         width: 256px;
         height: 100%;
+        background-color: $white;
         overflow-y: auto;
+        transition: 0.2s all linear;
+        transform: translateX(-256px);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 3;
 
         .depth1 {
             & > li {
@@ -60,6 +67,7 @@
                 }
 
                 .depth2 {
+                    // display: none;
                     padding: 5.5rem 0;
                     background-color: $lightGray;
                     border-top: 1px solid $gray2;
@@ -106,8 +114,54 @@
                             }
                         }
                     }
+
+                    .depth2 {
+                        // display: block;
+                    }
                 }
             }
+        }
+    }
+
+    .mofix-shadow {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        background-color: rgba($black, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s all linear;
+        z-index: 1;
+
+        .mo-btnClose {
+            @include posiCenter('v');
+            width: 40px;
+            height: 40px;
+            left: 266px;
+
+            span {
+                @include ir();
+                display: block;
+                width: 20px;
+                height: 20px;
+                margin: auto;
+                background: url('../images/common/btn_close.png') no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+
+    @at-root .mo-menuOpen {
+        .nav-wrap {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .mofix-shadow {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }
