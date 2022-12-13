@@ -38,3 +38,17 @@ function mobileGnb() {
     }
   });
 }
+
+// GNB Fixed
+var TopMenu, TopMenuPosition;
+TopMenu = document.getElementById('wrapper');
+TopMenuPosition = TopMenu.offsetTop;
+function submenu_bar_fixed() {
+  if (window.pageYOffset > TopMenuPosition) {
+    TopMenu.classList.add('fx');
+  } else {
+    TopMenu.classList.remove('fx');
+  }
+}
+submenu_bar_fixed();
+document.addEventListener('scroll', submenu_bar_fixed);

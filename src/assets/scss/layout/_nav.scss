@@ -3,6 +3,13 @@
     width: 100%;
     height: calc(100vh - 42.5px);
     top: 42.5px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+
+    @include mq('desktop') {
+        display: none;
+    }
 
     .nav-wrap {
         position: relative;
@@ -114,10 +121,6 @@
                             }
                         }
                     }
-
-                    .depth2 {
-                        // display: block;
-                    }
                 }
             }
         }
@@ -152,7 +155,11 @@
         }
     }
 
-    @at-root .mo-menuOpen {
+    @at-root .mo-menuOpen & {
+        opacity: 1;
+        visibility: visible;
+        z-index: 9;
+
         .nav-wrap {
             opacity: 1;
             visibility: visible;

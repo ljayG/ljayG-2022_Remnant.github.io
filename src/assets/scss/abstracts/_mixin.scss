@@ -52,3 +52,47 @@
         transform: translateY(-50%);
     }
 }
+
+@mixin mq($screen-width) {
+    @if $screen-width == 'deskTop-superWide' {
+        @media screen and (min-width: 1470px) {
+            @content;
+        }
+    } @else if $screen-width == 'desktop-wide' {
+        @media screen and (min-width: 1410px) {
+            @content;
+        }
+    } @else if $screen-width == 'desktop-anoter' {
+        @media screen and (min-width: 1300px) {
+            @content;
+        }
+    } @else if $screen-width == 'desktop' {
+        @media screen and (min-width: 1120px) {
+            @content;
+        }
+    } @else if $screen-width == 'tablet' {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    } @else if $screen-width == 'tabletLte' {
+        @media screen and (max-width: 1023px) {
+            @content;
+        }
+    } @else if $screen-width == 'mobile-anoter' {
+        @media screen and (min-width: 380px) {
+            @content;
+        }
+    } @else if $screen-width == 'onlyMobile-small' {
+        @media screen and (max-width: 380px) {
+            @content;
+        }
+    } @else if $screen-width == 'onlyMobile' {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    } @else if $screen-width == 'onlyTablet' {
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.main-viswrap {
+    height: 100vh;
+    .item {
+        position: relative;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @include mq('desktop') {
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 40vh;
+                top: 0;
+                background-image: linear-gradient(to top, rgba($black, 0), rgba($black, 1));
+            }
+        }
+
+        &.item-vis1 {
+            background-image: url('../images/main/main_vis01.jpg');
+        }
+    }
+}
