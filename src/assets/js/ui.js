@@ -5,6 +5,7 @@ $(function () {
 function init() {
   moMenuOpen();
   mobileGnb();
+  gnbMenu();
 }
 
 const WAPPER = $('#wrapper');
@@ -52,3 +53,37 @@ function submenu_bar_fixed() {
 }
 submenu_bar_fixed();
 document.addEventListener('scroll', submenu_bar_fixed);
+
+function gnbMenu() {
+  $(document).on('mouseover focus', '#gnb .nav-pcwrap .depth1', function () {
+    $(this).closest('.depth1').addClass('over');
+    $(this).closest('li').addClass('over').siblings('li').removeClass('over');
+    WAPPER.addClass('gnbopen');
+    let smHt = $('#gnb .nav-pcwrap').outerHeight() + 50;
+    $('#gnb').css({ height: smHt });
+  });
+
+  $(document).on('mouseleave', '#gnb .nav-pcwrap .depth1', function () {
+    WAPPER.removeClass('gnbopen');
+    $('.header .gnb .menu>li').removeClass('over');
+    $(this).closest('.depth1').removeClass('over');
+    $('#gnb').css('height', '');
+  });
+
+  $('.gnb .menu .active').each(function () {
+    $(this).find('>.bt').attr('title', '선택됨');
+  });
+
+  // 접근성 포커스 역방향 2022-08-12
+  $(document).on('focus', '.header .gnb .mtog', function () {
+    WAPPER.removeClass('gnbopen');
+    $('.header .gnb .menu>li').removeClass('over');
+    $('.header .gnb .menu').removeClass('over');
+  });
+  // 접근성 focusout 2022-08-23
+  $(document).on('focus', '.header .user', function () {
+    WAPPER.removeClass('gnbopen');
+    $('.header .gnb .menu>li').removeClass('over');
+    $('.header .gnb .menu').removeClass('over');
+  });
+}

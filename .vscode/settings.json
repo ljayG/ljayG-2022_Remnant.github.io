@@ -1,0 +1,32 @@
+{
+  // .map파일 생성 여부
+  "liveSassCompile.settings.generateMap": false,
+
+  // compile 형식, 확장자명, 저장 경로 설정
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css"
+    }
+  ],
+
+  // 크로스브라우징을 위한 prefix 설정
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+  "liveSassCompile.settings.includeItems": [],
+  "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/.vscode/**", "/**/js/**", "/**/plugins/**"],
+
+  // prettier 설정
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "prettier.trailingComma": "all",
+  "liveServer.settings.port": 5502
+
+  // "postcssSorting.config": {
+  //   "order": ["custom-properties", "dollar-variables", "declarations", "at-rules", "rules"],
+  //   "properties-order": ["display", "position", "top", "right", "bottom", "left"]
+  // }
+}

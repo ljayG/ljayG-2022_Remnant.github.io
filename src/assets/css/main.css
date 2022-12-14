@@ -571,15 +571,18 @@ legend,
   #header {
     height: 85px;
     background-color: transparent;
-    overflow: hidden;
+    -webkit-transition: 0.2s all linear;
+    transition: 0.2s all linear;
   }
   #header::after {
     display: none;
   }
   #header .logo {
+    position: relative;
     width: 198px;
     height: 48px;
     margin: 19px 0 0 24px;
+    z-index: 3;
   }
   #header .logo a {
     width: 100%;
@@ -589,6 +592,15 @@ legend,
   #header .logo a span {
     height: 100%;
     background-image: url("../images/common/logo_w.svg");
+  }
+  .fx #header {
+    background-color: #fff;
+  }
+  .fx #header .logo a span {
+    background-image: url("../images/common/logo.svg");
+  }
+  .gnbopen #header .logo a span {
+    background-image: url("../images/common/logo.svg");
   }
 }
 
@@ -744,6 +756,70 @@ legend,
 .mo-menuOpen .mo-nav .mofix-shadow {
   opacity: 1;
   visibility: visible;
+}
+
+.gnb {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 85px;
+  top: 0;
+  overflow: hidden;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  z-index: 2;
+}
+@media screen and (min-width: 1120px) {
+  .gnb {
+    display: block;
+  }
+}
+.gnb .nav-pcwrap {
+  max-width: 1500px;
+  height: auto;
+  margin: auto 7.3113207547% auto auto;
+  text-align: center;
+}
+.gnb .nav-pcwrap .depth1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.gnb .nav-pcwrap .depth1 > li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  margin: 0 30px;
+}
+.gnb .nav-pcwrap .depth1 > li .depalpha a {
+  display: block;
+  height: 85px;
+  font-size: 20rem;
+  color: #fff;
+  line-height: 85px;
+}
+.fx .gnb .nav-pcwrap .depth1 > li .depalpha a {
+  color: #222;
+}
+
+.gnb .nav-pcwrap .depth1 > li .depth2 > li {
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+.gnb .nav-pcwrap .depth1 > li .depth2 > li a {
+  font-size: 18rem;
+  color: #222;
+}
+.gnbopen .gnb {
+  background-color: #fff;
+}
+.gnbopen .gnb .nav-pcwrap .depth1 > li .depalpha a {
+  color: #222;
 }
 
 .main-viswrap {

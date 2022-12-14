@@ -124,16 +124,18 @@
     @include mq('desktop') {
         height: $nav-height;
         background-color: transparent;
-        overflow: hidden;
+        transition: 0.2s all linear;
 
         &::after {
             display: none;
         }
 
         .logo {
+            position: relative;
             width: 198px;
             height: 48px;
             margin: 19px 0 0 24px;
+            z-index: 3;
 
             a {
                 width: 100%;
@@ -143,6 +145,28 @@
                 span {
                     height: 100%;
                     background-image: url('../images/common/logo_w.svg');
+                }
+            }
+        }
+
+        @at-root .fx & {
+            background-color: $white;
+
+            .logo {
+                a {
+                    span {
+                        background-image: url('../images/common/logo.svg');
+                    }
+                }
+            }
+        }
+
+        @at-root .gnbopen & {
+            .logo {
+                a {
+                    span {
+                        background-image: url('../images/common/logo.svg');
+                    }
                 }
             }
         }

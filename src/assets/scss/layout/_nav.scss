@@ -172,3 +172,77 @@
         }
     }
 }
+
+.gnb {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 85px;
+    top: 0;
+    overflow: hidden;
+    transition: 0.2s all linear;
+    z-index: 2;
+
+    @include mq('desktop') {
+        display: block;
+    }
+
+    .nav-pcwrap {
+        max-width: 1500px;
+        height: auto;
+        margin: auto calc(186 / 2544) * 100% auto auto;
+        text-align: center;
+
+        .depth1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+
+            & > li {
+                flex: 0;
+                margin: 0 30px;
+
+                .depalpha {
+                    a {
+                        display: block;
+                        height: $nav-height;
+                        font-size: 20rem;
+                        color: $white;
+                        line-height: $nav-height;
+
+                        @at-root .fx & {
+                            color: $black2;
+                        }
+                    }
+                }
+
+                .depth2 {
+                    & > li {
+                        margin-bottom: 18px;
+                        line-height: 1.1;
+                        a {
+                            font-size: 18rem;
+                            color: $black2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @at-root .gnbopen & {
+        background-color: $white;
+
+        .nav-pcwrap {
+            .depth1 {
+                & > li {
+                    .depalpha {
+                        a {
+                            color: $black2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
