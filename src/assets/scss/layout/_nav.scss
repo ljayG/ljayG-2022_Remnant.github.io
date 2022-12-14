@@ -188,7 +188,7 @@
     }
 
     .nav-pcwrap {
-        max-width: 1500px;
+        max-width: 1430px;
         height: auto;
         margin: auto calc(186 / 2544) * 100% auto auto;
         text-align: center;
@@ -199,8 +199,9 @@
             justify-content: flex-end;
 
             & > li {
-                flex: 0;
-                margin: 0 30px;
+                flex: 1;
+                margin: 0 10px;
+                letter-spacing: -1px;
 
                 .depalpha {
                     a {
@@ -221,7 +222,7 @@
                         margin-bottom: 18px;
                         line-height: 1.1;
                         a {
-                            font-size: 18rem;
+                            font-size: 16rem;
                             color: $black2;
                         }
                     }
@@ -243,6 +244,22 @@
                     }
                 }
             }
+        }
+    }
+
+    .gnbclose {
+        display: block;
+        position: absolute;
+        width: 33px;
+        height: 32px;
+        bottom: 24px;
+        right: 21px;
+        background: url('../images/common/gnb_close.svg') no-repeat;
+        background-size: contain;
+
+        span {
+            @include ir();
+            display: block;
         }
     }
 }

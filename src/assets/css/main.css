@@ -568,6 +568,21 @@ legend,
   text-align: center;
 }
 @media screen and (min-width: 1120px) {
+  #header .head-snsBtn {
+    width: 48px;
+    height: 24px;
+    right: 24px;
+    font-size: 18rem;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+    background-color: #2f77c9;
+    border: none;
+    border-radius: 6px;
+    z-index: 3;
+  }
+}
+@media screen and (min-width: 1120px) {
   #header {
     height: 85px;
     background-color: transparent;
@@ -775,7 +790,7 @@ legend,
   }
 }
 .gnb .nav-pcwrap {
-  max-width: 1500px;
+  max-width: 1430px;
   height: auto;
   margin: auto 7.3113207547% auto auto;
   text-align: center;
@@ -791,10 +806,11 @@ legend,
           justify-content: flex-end;
 }
 .gnb .nav-pcwrap .depth1 > li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
-  margin: 0 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 10px;
+  letter-spacing: -1px;
 }
 .gnb .nav-pcwrap .depth1 > li .depalpha a {
   display: block;
@@ -812,7 +828,7 @@ legend,
   line-height: 1.1;
 }
 .gnb .nav-pcwrap .depth1 > li .depth2 > li a {
-  font-size: 18rem;
+  font-size: 16rem;
   color: #222;
 }
 .gnbopen .gnb {
@@ -820,6 +836,22 @@ legend,
 }
 .gnbopen .gnb .nav-pcwrap .depth1 > li .depalpha a {
   color: #222;
+}
+
+.gnb .gnbclose {
+  display: block;
+  position: absolute;
+  width: 33px;
+  height: 32px;
+  bottom: 24px;
+  right: 21px;
+  background: url("../images/common/gnb_close.svg") no-repeat;
+  background-size: contain;
+}
+.gnb .gnbclose span {
+  font-size: 1rem;
+  text-indent: -999999rem;
+  display: block;
 }
 
 .main-viswrap {

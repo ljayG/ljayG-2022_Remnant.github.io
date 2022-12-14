@@ -119,6 +119,20 @@
         border: 1px solid $color-primary;
         border-radius: 10px;
         text-align: center;
+
+        @include mq('desktop') {
+            width: 48px;
+            height: 24px;
+            right: 24px;
+            font-size: 18rem;
+            color: $white;
+            line-height: 24px;
+            text-align: center;
+            background-color: $blue;
+            border: none;
+            border-radius: 6px;
+            z-index: 3;
+        }
     }
 
     @include mq('desktop') {

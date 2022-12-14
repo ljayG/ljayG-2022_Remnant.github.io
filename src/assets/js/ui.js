@@ -63,7 +63,14 @@ function gnbMenu() {
     $('#gnb').css({ height: smHt });
   });
 
-  $(document).on('mouseleave', '#gnb .nav-pcwrap .depth1', function () {
+  $(document).on('mouseleave', '#header', function () {
+    WAPPER.removeClass('gnbopen');
+    $('.header .gnb .menu>li').removeClass('over');
+    $(this).closest('.depth1').removeClass('over');
+    $('#gnb').css('height', '');
+  });
+
+  $('#gnb #gnbClose').bind('click', function () {
     WAPPER.removeClass('gnbopen');
     $('.header .gnb .menu>li').removeClass('over');
     $(this).closest('.depth1').removeClass('over');
