@@ -925,16 +925,40 @@ legend,
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0), black);
   }
 }
-.main-viswrap .item.item-vis1 {
-  background-image: url("../images/main/main_vis01.jpg");
+.main-viswrap .item .itemimg {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+.main-viswrap .item .itemimg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-viswrap .item .item-inner {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
   padding: 0 20px;
   text-align: center;
+  z-index: 2;
 }
 .main-viswrap .item .item-inner .inw {
   -webkit-box-flex: 1;
@@ -996,6 +1020,20 @@ legend,
     margin: 0 0 0 68px;
   }
 }
+.main-viswrap .control-area {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 103px;
+  height: 33px;
+  bottom: 32px;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
+  z-index: 5;
+}
 @media screen and (min-width: 1120px) {
   .main-viswrap {
     height: 100vh;
@@ -1010,5 +1048,152 @@ legend,
   }
   .main-viswrap .item .item-inner .inw .intext {
     font-size: 28rem;
+  }
+  .main-viswrap .control-area {
+    width: 194px;
+    height: 53px;
+    bottom: 64px;
+    border-radius: 30px;
+  }
+}
+
+.main-sect01 {
+  padding: 26px 30px;
+  background-color: #f7f7fc;
+}
+.main-sect01 .btn-st {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 12px auto 0;
+  text-align: center;
+  background-color: #005bab;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.main-sect01 .btn-st .icoplus {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 8px auto;
+  background: url("../images/common/ico_plus03.png") no-repeat;
+  background-size: contain;
+}
+.main-sect01 .btn-st .text {
+  display: none;
+}
+@media screen and (min-width: 1120px) {
+  .main-sect01 {
+    padding: 65px 40px 70px;
+  }
+  .main-sect01 .btn-st {
+    width: 156px;
+    height: 46px;
+    margin-top: 45px;
+    padding: 0 10px;
+    line-height: 44px;
+    border-radius: 25px;
+  }
+  .main-sect01 .btn-st .icoplus {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 4px 0 0;
+  }
+  .main-sect01 .btn-st .text {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 20rem;
+  }
+}
+
+.main-sect02 {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.masect-tit {
+  margin-bottom: 12px;
+  font-size: 22rem;
+  font-weight: 900;
+  color: #005bab;
+  text-align: center;
+}
+@media screen and (min-width: 1120px) {
+  .masect-tit {
+    margin-bottom: 35px;
+    font-size: 40rem;
+  }
+}
+
+.masect-ment1 {
+  font-size: 14rem;
+  text-align: center;
+}
+@media screen and (min-width: 1120px) {
+  .masect-ment1 {
+    font-size: 20rem;
+  }
+}
+
+.main-inner {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media screen and (min-width: 1120px) {
+  .main-inner {
+    width: 1140px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.main-thumbitem > a {
+  display: block;
+}
+.main-thumbitem .item-thumb .item-img {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.main-thumbitem .item-thumb .item-img img {
+  width: 100%;
+}
+.main-thumbitem .item-thumb .item-img .movie-play {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  right: 8px;
+  bottom: 8px;
+  background: url("../images/common/bt_play.png") no-repeat;
+  background-size: contain;
+}
+.main-thumbitem .item-thumb figcaption {
+  margin-top: 6px;
+}
+.main-thumbitem .item-thumb figcaption h4 {
+  font-size: 14rem;
+  color: #005bab;
+}
+.main-thumbitem .item-thumb figcaption p {
+  margin-top: 2px;
+  font-size: 12rem;
+}
+@media screen and (min-width: 1120px) {
+  .main-thumbitem .item-thumb .item-img {
+    border-radius: 24px;
+  }
+  .main-thumbitem .item-thumb .item-img .movie-play {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    right: 8px;
+    bottom: 8px;
+    background: url("../images/common/bt_play.png") no-repeat;
+    background-size: contain;
   }
 }

@@ -357,10 +357,21 @@
       <!--// mobileNavgiton area(e) -->
       <!-- contents area(s) -->
       <main id="contents">
-        <div class="swiper main-viswrap">
+        <!-- 메인비주얼 슬라이드 영역(s) -->
+        <section class="swiper main-viswrap">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="item item-vis1">
+              <div class="item">
+                <div class="itemimg">
+                  <img src="../../assets/images/main/main_vis02.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="item">
+                <div class="itemimg">
+                  <img src="../../assets/images/main/main_vis03.jpg" alt="" />
+                </div>
                 <div class="item-inner">
                   <div class="inw">
                     <div class="tit">1,518,111</div>
@@ -376,14 +387,62 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">
+              <div class="item">
+                <div class="itemimg">
+                  <img src="../../assets/images/main/main_vis04.jpg" alt="" />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+          <div class="control-area">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <!--// 메인비주얼 슬라이드 영역(e) -->
+        <section class="main-sect01">
+          <h3 class="masect-tit">램넌트 청년국</h3>
+          <p class="masect-ment1">바알 세대에 무릎 꿇지 않고 이 시대의 남은 자(Remnant)로서의 사명을 감당하는영향력 있는 청년들을 길러내는 공동체</p>
+          <a href="#" class="btn-st">
+            <span class="icoplus"></span>
+            <span class="text">더 알아보기</span>
+          </a>
+        </section>
+        <section class="main-sect02">
+          <div class="main-inner">
+            <h3 class="masect-tit">화요램넌트워십</h3>
+            <div class="main-thumbitem">
+              <a href="#">
+                <figure class="item-thumb">
+                  <div class="item-img">
+                    <img src="../../assets/images/main/main_thum01.jpg" alt="" />
+                    <div class="movie-play"></div>
+                  </div>
+                  <figcaption>
+                    <h4>송병주 목사(LA선한청지기교회)</h4>
+                    <p>베데스다는 오징어 게임인가? (요한복음 5:1~9)</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </div>
+          </div>
+        </section>
 
         <div style="height: 5000px"></div>
 
         <script>
-          var swiper = new Swiper('.main-viswrap', {});
+          var swiper = new Swiper('.main-viswrap', {
+            pagination: {
+              el: '.swiper-pagination',
+              type: 'fraction',
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          });
         </script>
       </main>
       <!--// contents area(e) -->

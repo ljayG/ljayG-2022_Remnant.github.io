@@ -21,15 +21,36 @@
             }
         }
 
-        &.item-vis1 {
-            background-image: url('../images/main/main_vis01.jpg');
+        // &.item-vis3 {
+        //     background-image: url('../images/main/main_vis03.jpg');
+        // }
+
+        .itemimg {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            object-fit: cover;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
         .item-inner {
+            position: relative;
             display: flex;
             height: 100%;
             padding: 0 20px;
             text-align: center;
+            z-index: 2;
 
             .inw {
                 flex: 1 1 100%;
@@ -99,6 +120,17 @@
         }
     }
 
+    .control-area {
+        @include posiCenter('a');
+        width: 103px;
+        height: 33px;
+        bottom: 32px;
+        background-color: rgba($black, 0.8);
+        box-shadow: 0px 3px 7px 0 rgba($black, 0.35);
+        border-radius: 20px;
+        z-index: 5;
+    }
+
     @include mq('desktop') {
         height: 100vh;
         margin-top: 0;
@@ -116,6 +148,170 @@
                     .intext {
                         font-size: 28rem;
                     }
+                }
+            }
+        }
+
+        .control-area {
+            width: 194px;
+            height: 53px;
+            bottom: 64px;
+            border-radius: 30px;
+        }
+    }
+}
+
+.main-sect01 {
+    padding: 26px 30px;
+    background-color: $lightGray2;
+
+    .btn-st {
+        display: block;
+        width: 28px;
+        height: 28px;
+        margin: 12px auto 0;
+        text-align: center;
+        background-color: $color-primary;
+        border-radius: 50%;
+        overflow: hidden;
+
+        .icoplus {
+            display: block;
+            width: 12px;
+            height: 12px;
+            margin: 8px auto;
+            background: url('../images/common/ico_plus03.png') no-repeat;
+            background-size: contain;
+        }
+
+        .text {
+            display: none;
+        }
+    }
+
+    @include mq('desktop') {
+        padding: 65px 40px 70px;
+
+        .btn-st {
+            width: 156px;
+            height: 46px;
+            margin-top: 45px;
+            padding: 0 10px;
+            line-height: 44px;
+            border-radius: 25px;
+
+            .icoplus {
+                display: inline-block;
+                vertical-align: middle;
+                width: 20px;
+                height: 20px;
+                margin: 0 4px 0 0;
+            }
+
+            .text {
+                display: inline-block;
+                vertical-align: middle;
+                color: $white;
+                font-size: 20rem;
+            }
+        }
+    }
+}
+
+.main-sect02 {
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+
+.masect-tit {
+    margin-bottom: 12px;
+    font-size: 22rem;
+    font-weight: 900;
+    color: $color-primary;
+    text-align: center;
+
+    @include mq('desktop') {
+        margin-bottom: 35px;
+        font-size: 40rem;
+    }
+}
+
+.masect-ment1 {
+    font-size: 14rem;
+    text-align: center;
+
+    @include mq('desktop') {
+        font-size: 20rem;
+    }
+}
+
+.main-inner {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @include mq('desktop') {
+        width: 1140px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.main-thumbitem {
+    & > a {
+        display: block;
+    }
+
+    .item-thumb {
+        .item-img {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+
+            .movie-play {
+                position: absolute;
+                width: 36px;
+                height: 36px;
+                right: 8px;
+                bottom: 8px;
+                background: url('../images/common/bt_play.png') no-repeat;
+                background-size: contain;
+            }
+        }
+
+        figcaption {
+            margin-top: 6px;
+
+            h4 {
+                font-size: 14rem;
+                color: $color-primary;
+            }
+
+            p {
+                margin-top: 2px;
+                font-size: 12rem;
+            }
+        }
+    }
+
+    @include mq('desktop') {
+        .item-thumb {
+            .item-img {
+                border-radius: 24px;
+
+                .movie-play {
+                    position: absolute;
+                    width: 36px;
+                    height: 36px;
+                    right: 8px;
+                    bottom: 8px;
+                    background: url('../images/common/bt_play.png') no-repeat;
+                    background-size: contain;
                 }
             }
         }
