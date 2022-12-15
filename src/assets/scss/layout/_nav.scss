@@ -188,7 +188,8 @@
     }
 
     .nav-pcwrap {
-        max-width: 1430px;
+        width: 75%;
+        max-width: 830px;
         height: auto;
         margin: auto calc(186 / 2544) * 100% auto auto;
         text-align: center;
@@ -200,16 +201,42 @@
 
             & > li {
                 flex: 1;
-                margin: 0 10px;
+                margin: 0 5px;
                 letter-spacing: -1px;
 
                 .depalpha {
                     a {
                         display: block;
                         height: $nav-height;
-                        font-size: 20rem;
+                        font-size: 16rem;
                         color: $white;
                         line-height: $nav-height;
+
+                        strong {
+                            display: inline-block;
+                            position: relative;
+                            line-height: 1.2;
+
+                            &::before {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                width: 0;
+                                bottom: 0;
+                                height: 6px;
+                                background-color: $color-secondary;
+                                transition: 0.2s all linear;
+                                z-index: -1;
+                            }
+                        }
+
+                        &:hover {
+                            strong {
+                                &::before {
+                                    width: 100%;
+                                }
+                            }
+                        }
 
                         @at-root .fx & {
                             color: $black2;
@@ -222,8 +249,45 @@
                         margin-bottom: 18px;
                         line-height: 1.1;
                         a {
-                            font-size: 16rem;
+                            font-size: 14rem;
                             color: $black2;
+                        }
+                    }
+                }
+
+                &.current {
+                    .depalpha {
+                        a {
+                            strong {
+                                &::before {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include mq('deskTop-superWide') {
+            max-width: 1430px;
+            margin: auto calc(186 / 2544) * 100% auto auto;
+
+            .depth1 {
+                & > li {
+                    margin: 0 10px;
+
+                    .depalpha {
+                        a {
+                            font-size: 20rem;
+                        }
+                    }
+
+                    .depth2 {
+                        & > li {
+                            a {
+                                font-size: 16rem;
+                            }
                         }
                     }
                 }
@@ -231,8 +295,15 @@
         }
     }
 
+    .gnbclose {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s all linear 0.2s;
+    }
+
     @at-root .gnbopen & {
         background-color: $white;
+        box-shadow: rgba($black, 0.2) 0 0 12px;
 
         .nav-pcwrap {
             .depth1 {
@@ -245,21 +316,23 @@
                 }
             }
         }
-    }
 
-    .gnbclose {
-        display: block;
-        position: absolute;
-        width: 33px;
-        height: 32px;
-        bottom: 24px;
-        right: 21px;
-        background: url('../images/common/gnb_close.svg') no-repeat;
-        background-size: contain;
-
-        span {
-            @include ir();
+        .gnbclose {
             display: block;
+            position: absolute;
+            width: 33px;
+            height: 32px;
+            bottom: 24px;
+            right: 21px;
+            opacity: 1;
+            visibility: visible;
+            background: url('../images/common/gnb_close.svg') no-repeat;
+            background-size: contain;
+
+            span {
+                @include ir();
+                display: block;
+            }
         }
     }
 }

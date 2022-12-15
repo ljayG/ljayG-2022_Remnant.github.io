@@ -1,5 +1,7 @@
 .main-viswrap {
-    height: 100vh;
+    height: calc(100vh - 42px);
+    margin-top: 42.5px;
+
     .item {
         position: relative;
         height: 100%;
@@ -21,6 +23,101 @@
 
         &.item-vis1 {
             background-image: url('../images/main/main_vis01.jpg');
+        }
+
+        .item-inner {
+            display: flex;
+            height: 100%;
+            padding: 0 20px;
+            text-align: center;
+
+            .inw {
+                flex: 1 1 100%;
+                align-self: center;
+
+                .tit {
+                    color: $white;
+                    margin-bottom: 12px;
+                    font-size: 44rem;
+                    font-weight: 900;
+                    text-shadow: rgba($black, 0.5) 3px 3px 8px;
+                }
+
+                .intext {
+                    color: $white;
+                    font-size: 16rem;
+                    text-shadow: rgba($black, 0.5) 3px 3px 8px;
+                }
+
+                .btns {
+                    margin-top: 25px;
+
+                    a {
+                        display: inline-block;
+                        width: 100%;
+                        height: 38px;
+                        color: $blue;
+                        font-size: 16rem;
+                        font-weight: 700;
+                        line-height: 38px;
+                        border-radius: 20px;
+                        background-color: $white;
+
+                        &.bt-blue {
+                            color: $white;
+                            background-color: $blue;
+                        }
+
+                        & + a {
+                            margin-top: 12px;
+                        }
+                    }
+
+                    @include mq('tablet') {
+                        a {
+                            width: 500px;
+                        }
+                    }
+
+                    @include mq('desktop') {
+                        margin-top: 60px;
+
+                        a {
+                            width: 340px;
+                            height: 72px;
+                            font-size: 28rem;
+                            line-height: 72px;
+                            border-radius: 40px;
+
+                            & + a {
+                                margin: 0 0 0 68px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq('desktop') {
+        height: 100vh;
+        margin-top: 0;
+
+        .item {
+            .item-inner {
+                padding: 0 40px;
+
+                .inw {
+                    .tit {
+                        margin-bottom: 25px;
+                        font-size: 100rem;
+                    }
+
+                    .intext {
+                        font-size: 28rem;
+                    }
+                }
+            }
         }
     }
 }
