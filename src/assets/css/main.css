@@ -1030,6 +1030,14 @@ legend,
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: auto;
+  height: 100%;
+}
+@media screen and (min-width: 1120px) {
+  .main-viswrap .video-container video {
+    width: 100%;
+    height: auto;
+  }
 }
 .main-viswrap .control-area {
   position: absolute;
