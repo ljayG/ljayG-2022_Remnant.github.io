@@ -129,6 +129,89 @@
         box-shadow: 0px 3px 7px 0 rgba($black, 0.35);
         border-radius: 20px;
         z-index: 5;
+
+        .swiper-pagination {
+            color: $white;
+            font-size: 12rem;
+            left: 0;
+            width: 40%;
+
+            @include mq('desktop') {
+                font-size: 18px;
+                left: 18px;
+                width: 40px;
+                letter-spacing: -1.5px;
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 10px;
+            height: 17px;
+            margin-top: -8.5px;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        .swiper-button-prev {
+            left: 45px;
+            background-image: url('../images/common/sld_prev_1.png');
+
+            @include mq('desktop') {
+                left: 88px;
+            }
+        }
+        .swiper-button-next {
+            right: 8px;
+            background-image: url('../images/common/sld_next_1.png');
+
+            @include mq('desktop') {
+                right: 27px;
+            }
+        }
+
+        .swiper-play {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            top: 50%;
+            margin-top: -7px;
+            right: 25px;
+
+            .btn_pause {
+                display: block;
+                width: 14px;
+                height: 14px;
+                overflow: hidden;
+
+                span {
+                    display: block;
+                    height: 100%;
+                    background-image: url('../images/common/sld_stop_1.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+
+                &.on {
+                    span {
+                        margin: auto;
+                        background-image: url('../images/common/sld_play_1.png');
+                    }
+                }
+            }
+
+            @include mq('desktop') {
+                width: 16px;
+                height: 16px;
+                margin-top: -8px;
+                right: 58px;
+            }
+        }
     }
 
     @include mq('desktop') {
@@ -258,12 +341,63 @@
     }
 }
 
+.main-inner2 {
+    @include mq('desktop') {
+        width: 1140px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .main-thumbitem {
-    & > a {
-        display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & > li {
+        flex: 1 1 100%;
+        margin-top: 15px;
+
+        & > a {
+            display: block;
+        }
+
+        @include mq('tabletLte') {
+            &:nth-of-type(n + 4) {
+                display: none;
+            }
+        }
+
+        @include mq('desktop') {
+            flex: 0 0 calc(551px / 1140px) * 100%;
+            margin-top: 40px;
+
+            &.mali1 {
+                flex-basis: 100%;
+
+                .item-thumb {
+                    figcaption {
+                        position: absolute;
+                        left: 33px;
+                        bottom: 30px;
+
+                        h4,
+                        p {
+                            font-size: 20rem;
+                            font-weight: 400;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .item-thumb {
+        position: relative;
+
         .item-img {
             position: relative;
             border-radius: 12px;
@@ -312,6 +446,83 @@
                     bottom: 8px;
                     background: url('../images/common/bt_play.png') no-repeat;
                     background-size: contain;
+                }
+            }
+
+            figcaption {
+                h4 {
+                    font-size: 22rem;
+                }
+
+                p {
+                    font-size: 18rem;
+                }
+            }
+        }
+    }
+}
+
+.main-programWrap {
+    .item {
+        .itemimg {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+
+            .intext {
+                position: absolute;
+                top: 8px;
+                left: 8px;
+                color: $white;
+
+                .tit {
+                    font-weight: 700;
+                    font-size: 20rem;
+
+                    span {
+                        font-size: 12rem;
+                    }
+                }
+
+                .name {
+                    font-size: 12rem;
+                }
+            }
+        }
+
+        .btmtext {
+            margin-top: 5px;
+
+            p {
+                font-size: 12rem;
+            }
+
+            .sldbtn-wrap {
+                text-align: center;
+
+                .sldbtn {
+                    display: inline-block;
+                    height: 25px;
+                    margin-top: 12px;
+                    padding: 0 20px;
+                    line-height: 25px;
+                    font-size: 12rem;
+                    text-align: center;
+                    border-radius: 13px;
+                    background-color: $gray3;
+
+                    & + .sldbtn {
+                        margin-left: 9px;
+                    }
+
+                    &.bluebtn {
+                        color: $white;
+                        background-color: $color-primary;
+                    }
                 }
             }
         }
