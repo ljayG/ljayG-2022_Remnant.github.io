@@ -230,16 +230,20 @@
                             }
                         }
 
-                        &:hover {
+                        @at-root .fx & {
+                            color: $black2;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .depalpha {
+                        a {
                             strong {
                                 &::before {
                                     width: 100%;
                                 }
                             }
-                        }
-
-                        @at-root .fx & {
-                            color: $black2;
                         }
                     }
                 }

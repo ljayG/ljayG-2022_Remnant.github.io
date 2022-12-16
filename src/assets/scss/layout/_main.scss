@@ -304,6 +304,11 @@
 .main-sect02 {
     padding-top: 26px;
     padding-bottom: 26px;
+
+    @include mq('desktop') {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
 }
 
 .masect-tit {
@@ -333,9 +338,7 @@
     padding-right: 30px;
 
     @include mq('desktop') {
-        width: 1140px;
-        padding-left: 0;
-        padding-right: 0;
+        max-width: 1140px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -343,9 +346,9 @@
 
 .main-inner2 {
     @include mq('desktop') {
-        width: 1140px;
-        padding-left: 0;
-        padding-right: 0;
+        max-width: 1140px;
+        padding-left: 30px;
+        padding-right: 30px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -492,6 +495,27 @@
                     font-size: 12rem;
                 }
             }
+
+            @include mq('desktop') {
+                border-radius: 24px;
+
+                .intext {
+                    top: 30px;
+                    left: 32px;
+
+                    .tit {
+                        font-size: 32rem;
+
+                        span {
+                            font-size: 20rem;
+                        }
+                    }
+
+                    .name {
+                        font-size: 20rem;
+                    }
+                }
+            }
         }
 
         .btmtext {
@@ -501,28 +525,194 @@
                 font-size: 12rem;
             }
 
-            .sldbtn-wrap {
-                text-align: center;
+            @include mq('desktop') {
+                margin-top: 18px;
 
-                .sldbtn {
+                p {
+                    min-height: 81px;
+                    font-size: 18rem;
+                }
+            }
+        }
+    }
+}
+
+.sldbtn-wrap {
+    margin-top: 12px;
+    text-align: center;
+
+    .sldbtn {
+        display: inline-block;
+        height: 25px;
+        padding: 0 20px;
+        line-height: 25px;
+        font-size: 12rem;
+        text-align: center;
+        border-radius: 13px;
+        background-color: $gray3;
+
+        & + .sldbtn {
+            margin-left: 8px;
+        }
+
+        &.bluebtn {
+            color: $white;
+            background-color: $color-primary;
+        }
+    }
+
+    @include mq('desktop') {
+        margin-top: 16px;
+        text-align: left;
+
+        .sldbtn {
+            height: 28px;
+            line-height: 28px;
+            font-size: 18rem;
+        }
+    }
+}
+
+.sw-prg {
+    position: relative;
+
+    .control-area2 {
+        position: absolute;
+        width: 100%;
+        top: 25%;
+
+        .swiper-button-prev2,
+        .swiper-button-next2 {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            &::after {
+                display: none;
+            }
+
+            &.swiper-button-disabled {
+                opacity: 0.35;
+            }
+        }
+
+        .swiper-button-prev2 {
+            left: -28px;
+            background-image: url('../images/common/sld_prev.svg');
+        }
+
+        .swiper-button-next2 {
+            right: -28px;
+            background-image: url('../images/common/sld_next.svg');
+        }
+
+        .swiper-pagination2 {
+            display: none;
+        }
+
+        @include mq('desktop') {
+            top: 30%;
+            height: 57px;
+
+            .swiper-button-prev2,
+            .swiper-button-next2 {
+                width: 57px;
+                height: 57px;
+            }
+
+            .swiper-button-prev2 {
+                left: -88px;
+            }
+
+            .swiper-button-next2 {
+                right: -88px;
+            }
+
+            .swiper-pagination2 {
+                display: block;
+                position: absolute;
+                width: auto;
+                top: -184px;
+                right: 0;
+                left: auto;
+                bottom: auto;
+
+                color: transparent;
+
+                .swiper-pagination-current {
                     display: inline-block;
-                    height: 25px;
-                    margin-top: 12px;
-                    padding: 0 20px;
-                    line-height: 25px;
-                    font-size: 12rem;
+                    height: 24px;
+                    padding: 0 10px;
+                    font-size: 20rem;
+                    color: $white;
                     text-align: center;
-                    border-radius: 13px;
-                    background-color: $gray3;
+                    line-height: 24px;
+                    background-color: $gray;
+                    border-radius: 12px;
+                }
 
-                    & + .sldbtn {
-                        margin-left: 9px;
-                    }
+                .swiper-pagination-total {
+                    color: $color-default;
+                    font-size: 20rem;
+                }
+            }
+        }
+    }
+}
 
-                    &.bluebtn {
-                        color: $white;
-                        background-color: $color-primary;
-                    }
+.main-thumbitem2 {
+    .ma-imgfig {
+        .item-img {
+            border-radius: 12px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        figcaption {
+            margin-top: 8px;
+
+            .tit {
+                display: none;
+            }
+
+            .desc {
+                font-size: 12rem;
+            }
+        }
+    }
+
+    @include mq('desktop') {
+        .ma-imgfig {
+            display: flex;
+
+            .item-img {
+                flex: 1 1 550px;
+                max-width: 550px;
+                border-radius: 24px;
+
+                img {
+                    max-width: 550px;
+                }
+            }
+
+            figcaption {
+                margin: 0 0 0 40px;
+
+                .tit {
+                    display: block;
+                    font-weight: 700;
+                    font-size: 26px;
+                }
+
+                .desc {
+                    margin-top: 10px;
+                    font-size: 18rem;
                 }
             }
         }
