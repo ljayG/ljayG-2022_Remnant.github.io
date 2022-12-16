@@ -316,6 +316,17 @@
                 color: $white;
                 font-size: 20rem;
             }
+
+            &.type2 {
+                width: 46px;
+                height: 46px;
+                overflow: hidden;
+
+                .icoplus {
+                    display: block;
+                    margin: 13px auto;
+                }
+            }
         }
     }
 }
@@ -461,13 +472,10 @@
                 border-radius: 24px;
 
                 .movie-play {
-                    position: absolute;
-                    width: 36px;
-                    height: 36px;
-                    right: 8px;
-                    bottom: 8px;
-                    background: url('../images/common/bt_play.png') no-repeat;
-                    background-size: contain;
+                    width: 46px;
+                    height: 46px;
+                    right: 32px;
+                    bottom: 32px;
                 }
             }
 
@@ -732,6 +740,33 @@
                 .desc {
                     margin-top: 10px;
                     font-size: 18rem;
+                }
+            }
+        }
+    }
+}
+
+.main-thumbitem3 {
+    .ma-imgfig {
+        .item-img {
+            img {
+                width: 100%;
+            }
+        }
+
+        figcaption {
+            margin-top: 8px;
+
+            .desc {
+                font-size: 12rem;
+                text-align: center;
+            }
+
+            @include mq('desktop') {
+                margin-top: 25px;
+
+                .desc {
+                    font-size: 20rem;
                 }
             }
         }

@@ -1208,6 +1208,15 @@ legend,
     color: #fff;
     font-size: 20rem;
   }
+  .main-sect01 .btn-st.type2 {
+    width: 46px;
+    height: 46px;
+    overflow: hidden;
+  }
+  .main-sect01 .btn-st.type2 .icoplus {
+    display: block;
+    margin: 13px auto;
+  }
 }
 
 .main-sect02 {
@@ -1350,13 +1359,10 @@ legend,
     border-radius: 24px;
   }
   .main-thumbitem .item-thumb .item-img .movie-play {
-    position: absolute;
-    width: 36px;
-    height: 36px;
-    right: 8px;
-    bottom: 8px;
-    background: url("../images/common/bt_play.png") no-repeat;
-    background-size: contain;
+    width: 46px;
+    height: 46px;
+    right: 32px;
+    bottom: 32px;
   }
   .main-thumbitem .item-thumb figcaption h4 {
     font-size: 22rem;
@@ -1579,5 +1585,24 @@ legend,
   .main-thumbitem2 .ma-imgfig figcaption .desc {
     margin-top: 10px;
     font-size: 18rem;
+  }
+}
+
+.main-thumbitem3 .ma-imgfig .item-img img {
+  width: 100%;
+}
+.main-thumbitem3 .ma-imgfig figcaption {
+  margin-top: 8px;
+}
+.main-thumbitem3 .ma-imgfig figcaption .desc {
+  font-size: 12rem;
+  text-align: center;
+}
+@media screen and (min-width: 1120px) {
+  .main-thumbitem3 .ma-imgfig figcaption {
+    margin-top: 25px;
+  }
+  .main-thumbitem3 .ma-imgfig figcaption .desc {
+    font-size: 20rem;
   }
 }
