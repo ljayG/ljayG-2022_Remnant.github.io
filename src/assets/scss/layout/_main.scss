@@ -120,6 +120,14 @@
         }
     }
 
+    .video-container {
+        position: relative;
+        height: 100%;
+        video {
+            @include posiCenter('va');
+        }
+    }
+
     .control-area {
         @include posiCenter('a');
         width: 103px;
@@ -132,9 +140,12 @@
 
         .swiper-pagination {
             color: $white;
+            width: 40%;
             font-size: 12rem;
             left: 0;
-            width: 40%;
+            top: 50%;
+            line-height: 1;
+            transform: translateY(-50%);
 
             @include mq('desktop') {
                 font-size: 18px;
