@@ -930,6 +930,100 @@ legend,
   display: block;
 }
 
+.foot-inner {
+  position: relative;
+  padding: 30px 20px 30px;
+}
+.foot-inner .footlogo {
+  width: 106.5px;
+  height: 25.5px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/common/logo.svg");
+}
+.foot-inner .footlogo span {
+  font-size: 1rem;
+  text-indent: -999999rem;
+  display: none;
+}
+.foot-inner address {
+  margin-top: 12px;
+  font-size: 12rem;
+  text-align: center;
+}
+.foot-inner address h6 {
+  position: relative;
+  display: inline-block;
+  padding-right: 10px;
+  margin-right: 8px;
+  font-size: 12rem;
+  font-weight: 700;
+}
+.foot-inner address h6::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "";
+  right: 0;
+  width: 1px;
+  height: 12px;
+  background-color: #444;
+}
+.foot-inner address .addr {
+  position: relative;
+  display: inline-block;
+}
+.foot-inner address .addr-etc {
+  margin-top: 5px;
+}
+.foot-inner address .addr-etc span {
+  position: relative;
+  display: inline-block;
+}
+.foot-inner address .addr-etc span + span {
+  margin-left: 5px;
+}
+.foot-inner address .addr-etc span em {
+  font-style: normal;
+  color: #005bab;
+}
+@media screen and (min-width: 1120px) {
+  .foot-inner {
+    max-width: 1140px;
+    margin: auto;
+    padding: 30px 0 105px;
+  }
+  .foot-inner .footlogo {
+    position: absolute;
+    width: 194px;
+    height: 47px;
+    top: 30px;
+    left: 0;
+  }
+  .foot-inner address {
+    padding-left: 230px;
+    margin-top: 0;
+    font-size: 18rem;
+    text-align: initial;
+  }
+  .foot-inner address h6 {
+    padding-right: 14px;
+    margin-right: 10px;
+    font-size: 18rem;
+  }
+  .foot-inner address h6::after {
+    height: 18px;
+  }
+  .foot-inner address .addr-etc {
+    margin-top: 2px;
+  }
+  .foot-inner address .addr-etc span + span {
+    margin-left: 10px;
+  }
+}
+
 .main-viswrap {
   height: calc(100vh - 42px);
   margin-top: 42.5px;
@@ -1752,99 +1846,5 @@ legend,
   }
   .main-btmsld .item .btmsld-fig figcaption .tit {
     font-size: 26rem;
-  }
-}
-
-.foot-inner {
-  position: relative;
-  padding: 30px 20px 30px;
-}
-.foot-inner .footlogo {
-  width: 106.5px;
-  height: 25.5px;
-  margin: auto;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("../images/common/logo.svg");
-}
-.foot-inner .footlogo span {
-  font-size: 1rem;
-  text-indent: -999999rem;
-  display: none;
-}
-.foot-inner address {
-  margin-top: 12px;
-  font-size: 12rem;
-  text-align: center;
-}
-.foot-inner address h6 {
-  position: relative;
-  display: inline-block;
-  padding-right: 10px;
-  margin-right: 8px;
-  font-size: 12rem;
-  font-weight: 700;
-}
-.foot-inner address h6::after {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  content: "";
-  right: 0;
-  width: 1px;
-  height: 12px;
-  background-color: #444;
-}
-.foot-inner address .addr {
-  position: relative;
-  display: inline-block;
-}
-.foot-inner address .addr-etc {
-  margin-top: 5px;
-}
-.foot-inner address .addr-etc span {
-  position: relative;
-  display: inline-block;
-}
-.foot-inner address .addr-etc span + span {
-  margin-left: 5px;
-}
-.foot-inner address .addr-etc span em {
-  font-style: normal;
-  color: #005bab;
-}
-@media screen and (min-width: 1120px) {
-  .foot-inner {
-    max-width: 1140px;
-    margin: auto;
-    padding: 30px 0 105px;
-  }
-  .foot-inner .footlogo {
-    position: absolute;
-    width: 194px;
-    height: 47px;
-    top: 30px;
-    left: 0;
-  }
-  .foot-inner address {
-    padding-left: 230px;
-    margin-top: 0;
-    font-size: 18rem;
-    text-align: initial;
-  }
-  .foot-inner address h6 {
-    padding-right: 14px;
-    margin-right: 10px;
-    font-size: 18rem;
-  }
-  .foot-inner address h6::after {
-    height: 18px;
-  }
-  .foot-inner address .addr-etc {
-    margin-top: 2px;
-  }
-  .foot-inner address .addr-etc span + span {
-    margin-left: 10px;
   }
 }

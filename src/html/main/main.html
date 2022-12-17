@@ -36,6 +36,7 @@
         <nav class="gnb" id="gnb">
           <h2 class="blind">주요메뉴</h2>
           <div class="nav-pcwrap">
+            <!-- 현재 페이지에는 li에 current 를 추가해 주세요. -->
             <ul class="depth1">
               <li class="active">
                 <div class="depalpha">
@@ -164,7 +165,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="current">
+              <li>
                 <div class="depalpha">
                   <a href="#"><strong>램넌트 소개</strong></a>
                 </div>
@@ -672,73 +673,6 @@
             </div>
           </div>
         </section>
-
-        <script>
-          var swiperMainVisual = new Swiper('.main-viswrap', {
-            pagination: {
-              el: '.swiper-pagination',
-              type: 'fraction',
-            },
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-              delay: 5000,
-              pauseOnMouseEnter: false,
-              disableOnInteraction: false,
-            },
-          });
-
-          var sw = 0;
-          $('.main-viswrap .btn_pause').bind('click', function (e) {
-            e.preventDefault();
-            if (sw == 0) {
-              $(this).addClass('on');
-              swiperMainVisual.autoplay.stop();
-              sw = 1;
-            } else {
-              $(this).removeClass('on');
-              swiperMainVisual.autoplay.start();
-              sw = 0;
-            }
-          });
-
-          var swiperMainProg = new Swiper('.main-programWrap', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            pagination: {
-              el: '.swiper-pagination2',
-              type: 'fraction',
-            },
-            navigation: {
-              nextEl: '.swiper-button-next2',
-              prevEl: '.swiper-button-prev2',
-            },
-            breakpoints: {
-              1120: {
-                slidesPerView: 2,
-                spaceBetween: 40,
-              },
-            },
-          });
-
-          var swiperMainBtm = new Swiper('.main-btmsld', {
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            spaceBetween: 8,
-            loop: true,
-            breakpoints: {
-              1120: {
-                spaceBetween: 25,
-                navigation: {
-                  nextEl: '.swiper-button-next3',
-                  prevEl: '.swiper-button-prev3',
-                },
-              },
-            },
-          });
-        </script>
       </main>
       <!--// contents area(e) -->
       <!-- footer area(s)-->
@@ -759,5 +693,6 @@
       <!--// footer area(e)-->
     </div>
     <script src="../../assets/js/ui.js"></script>
+    <script src="../../assets/js/main.js"></script>
   </body>
 </html>
