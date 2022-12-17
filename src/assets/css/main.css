@@ -438,6 +438,29 @@ legend,
   clear: both;
 }
 
+@-webkit-keyframes backLoop {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes backLoop {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 #header {
   position: fixed;
   width: 100%;
@@ -453,8 +476,11 @@ legend,
   width: 100%;
   height: 1px;
   bottom: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#005bab), to(#f9b43a));
-  background-image: linear-gradient(to right, #005bab, #f9b43a);
+  background: -webkit-gradient(linear, left top, right top, from(#005bab), to(#f9b43a));
+  background: linear-gradient(to right, #005bab, #f9b43a);
+  background-size: 200% 200%;
+  -webkit-animation: backLoop 12s ease infinite;
+          animation: backLoop 12s ease infinite;
   z-index: 2;
 }
 #header .logo {
@@ -610,6 +636,8 @@ legend,
   }
   .fx #header {
     background-color: #fff;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 12px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0 0 12px;
   }
   .fx #header .logo a span {
     background-image: url("../images/common/logo.svg");
@@ -1604,5 +1632,219 @@ legend,
   }
   .main-thumbitem3 .ma-imgfig figcaption .desc {
     font-size: 20rem;
+  }
+}
+
+.main-story {
+  position: relative;
+}
+.main-story .control-area3 {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 25%;
+}
+.main-story .control-area3 .swiper-button-prev3,
+.main-story .control-area3 .swiper-button-next3 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main-story .control-area3 .swiper-button-prev3::after,
+.main-story .control-area3 .swiper-button-next3::after {
+  display: none;
+}
+.main-story .control-area3 .swiper-button-prev3.swiper-button-disabled,
+.main-story .control-area3 .swiper-button-next3.swiper-button-disabled {
+  opacity: 0.35;
+}
+.main-story .control-area3 .swiper-button-prev3 {
+  left: -28px;
+  background-image: url("../images/common/sld_prev.svg");
+}
+.main-story .control-area3 .swiper-button-next3 {
+  right: -28px;
+  background-image: url("../images/common/sld_next.svg");
+}
+.main-story .control-area3 .swiper-pagination3 {
+  display: none;
+}
+@media screen and (min-width: 1120px) {
+  .main-story .control-area3 {
+    display: block;
+    top: 50%;
+    height: 57px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .main-story .control-area3 .swiper-button-prev3,
+.main-story .control-area3 .swiper-button-next3 {
+    width: 57px;
+    height: 57px;
+  }
+  .main-story .control-area3 .swiper-button-prev3 {
+    left: -88px;
+  }
+  .main-story .control-area3 .swiper-button-next3 {
+    right: -88px;
+  }
+}
+
+.main-btmsld .swiper-slide {
+  width: 66.875%;
+}
+.main-btmsld .item {
+  display: block;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+.main-btmsld .item .btmsld-fig .i-img {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.main-btmsld .item .btmsld-fig .i-img img {
+  width: 100%;
+}
+.main-btmsld .item .btmsld-fig figcaption {
+  margin-top: 8px;
+}
+.main-btmsld .item .btmsld-fig figcaption .desc {
+  font-size: 12rem;
+}
+.main-btmsld .item .btmsld-fig figcaption .tit {
+  font-size: 16rem;
+}
+.main-btmsld .swiper-slide-prev .item {
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+.main-btmsld .swiper-slide-next .item {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+.main-btmsld .swiper-slide-active .item {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+@media screen and (min-width: 1120px) {
+  .main-btmsld .swiper-slide {
+    width: 550px;
+  }
+  .main-btmsld .item {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  .main-btmsld .item .btmsld-fig .i-img {
+    border-radius: 24px;
+  }
+  .main-btmsld .item .btmsld-fig figcaption {
+    margin-top: 15px;
+  }
+  .main-btmsld .item .btmsld-fig figcaption .desc {
+    font-size: 18rem;
+  }
+  .main-btmsld .item .btmsld-fig figcaption .tit {
+    font-size: 26rem;
+  }
+}
+
+.foot-inner {
+  position: relative;
+  padding: 30px 20px 30px;
+}
+.foot-inner .footlogo {
+  width: 106.5px;
+  height: 25.5px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/common/logo.svg");
+}
+.foot-inner .footlogo span {
+  font-size: 1rem;
+  text-indent: -999999rem;
+  display: none;
+}
+.foot-inner address {
+  margin-top: 12px;
+  font-size: 12rem;
+  text-align: center;
+}
+.foot-inner address h6 {
+  position: relative;
+  display: inline-block;
+  padding-right: 10px;
+  margin-right: 8px;
+  font-size: 12rem;
+  font-weight: 700;
+}
+.foot-inner address h6::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "";
+  right: 0;
+  width: 1px;
+  height: 12px;
+  background-color: #444;
+}
+.foot-inner address .addr {
+  position: relative;
+  display: inline-block;
+}
+.foot-inner address .addr-etc {
+  margin-top: 5px;
+}
+.foot-inner address .addr-etc span {
+  position: relative;
+  display: inline-block;
+}
+.foot-inner address .addr-etc span + span {
+  margin-left: 5px;
+}
+.foot-inner address .addr-etc span em {
+  font-style: normal;
+  color: #005bab;
+}
+@media screen and (min-width: 1120px) {
+  .foot-inner {
+    max-width: 1140px;
+    margin: auto;
+    padding: 30px 0 105px;
+  }
+  .foot-inner .footlogo {
+    position: absolute;
+    width: 194px;
+    height: 47px;
+    top: 30px;
+    left: 0;
+  }
+  .foot-inner address {
+    padding-left: 230px;
+    margin-top: 0;
+    font-size: 18rem;
+    text-align: initial;
+  }
+  .foot-inner address h6 {
+    padding-right: 14px;
+    margin-right: 10px;
+    font-size: 18rem;
+  }
+  .foot-inner address h6::after {
+    height: 18px;
+  }
+  .foot-inner address .addr-etc {
+    margin-top: 2px;
+  }
+  .foot-inner address .addr-etc span + span {
+    margin-left: 10px;
   }
 }

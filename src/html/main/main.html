@@ -360,9 +360,9 @@
         <!-- 메인비주얼 슬라이드 영역(s) -->
         <section class="swiper main-viswrap">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" data-swiper-autoplay="50000">
+            <div class="swiper-slide" data-swiper-autoplay="47000">
               <div class="video-container">
-                <video poster="../../assets/images/main/main_vis04.jpg" autoplay playsinline muted>
+                <video poster="../../assets/images/main/main_vis04.jpg" autoplay playsinline muted loop>
                   <source src="../../assets/images/movie/main_video.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -624,6 +624,54 @@
             </div>
           </div>
         </section>
+        <section class="main-sect02">
+          <div class="main-inner2">
+            <h3 class="masect-tit">성장스토리</h3>
+            <div class="main-story">
+              <div class="swiper main-btmsld">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a class="item">
+                      <figure class="btmsld-fig">
+                        <div class="i-img"><img src="../../assets/images/main/main_sldbtm01.jpg" /></div>
+                        <figcaption>
+                          <p class="desc">제자훈련은 마음이 뜨거워지는..</p>
+                          <h4 class="tit">홍길도 자매</h4>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item">
+                      <figure class="btmsld-fig">
+                        <div class="i-img"><img src="../../assets/images/main/main_sldbtm02.jpg" /></div>
+                        <figcaption>
+                          <p class="desc">제자훈련은 마음이 뜨거워지는..</p>
+                          <h4 class="tit">홍길도 자매</h4>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item">
+                      <figure class="btmsld-fig">
+                        <div class="i-img"><img src="../../assets/images/main/main_sldbtm03.jpg" /></div>
+                        <figcaption>
+                          <p class="desc">제자훈련은 마음이 뜨거워지는..</p>
+                          <h4 class="tit">홍길도 자매</h4>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="control-area3">
+                <button class="swiper-button-prev3"></button>
+                <button class="swiper-button-next3"></button>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <script>
           var swiperMainVisual = new Swiper('.main-viswrap', {
@@ -674,9 +722,41 @@
               },
             },
           });
+
+          var swiperMainBtm = new Swiper('.main-btmsld', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 8,
+            loop: true,
+            breakpoints: {
+              1120: {
+                spaceBetween: 25,
+                navigation: {
+                  nextEl: '.swiper-button-next3',
+                  prevEl: '.swiper-button-prev3',
+                },
+              },
+            },
+          });
         </script>
       </main>
       <!--// contents area(e) -->
+      <!-- footer area(s)-->
+      <footer id="footer">
+        <div class="foot-inner">
+          <h5 class="footlogo"><span>REMNANT</span></h5>
+          <address>
+            <h6>램넌트청년국</h6>
+            <div class="addr">서울시 강동구 양재대로81길 34, 8층</div>
+            <div class="addr-etc">
+              <span>(우)05408</span>
+              <span>TEL <em>02-6413-4922~4924</em></span>
+              <span><em>21danielprayer@gmail.com</em></span>
+            </div>
+          </address>
+        </div>
+      </footer>
+      <!--// footer area(e)-->
     </div>
     <script src="../../assets/js/ui.js"></script>
   </body>

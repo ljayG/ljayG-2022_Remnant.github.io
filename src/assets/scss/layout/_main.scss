@@ -772,3 +772,147 @@
         }
     }
 }
+
+.main-story {
+    position: relative;
+
+    .control-area3 {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 25%;
+
+        .swiper-button-prev3,
+        .swiper-button-next3 {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            &::after {
+                display: none;
+            }
+
+            &.swiper-button-disabled {
+                opacity: 0.35;
+            }
+        }
+
+        .swiper-button-prev3 {
+            left: -28px;
+            background-image: url('../images/common/sld_prev.svg');
+        }
+
+        .swiper-button-next3 {
+            right: -28px;
+            background-image: url('../images/common/sld_next.svg');
+        }
+
+        .swiper-pagination3 {
+            display: none;
+        }
+
+        @include mq('desktop') {
+            display: block;
+            top: 50%;
+            height: 57px;
+            transform: translateY(-50%);
+
+            .swiper-button-prev3,
+            .swiper-button-next3 {
+                width: 57px;
+                height: 57px;
+            }
+
+            .swiper-button-prev3 {
+                left: -88px;
+            }
+
+            .swiper-button-next3 {
+                right: -88px;
+            }
+        }
+    }
+}
+
+.main-btmsld {
+    .swiper-slide {
+        width: (428/640) * 100%;
+    }
+
+    .item {
+        display: block;
+        transform: scale(0.7);
+        transform-origin: top;
+        transition: 0.2s all linear;
+
+        .btmsld-fig {
+            .i-img {
+                border-radius: 12px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            figcaption {
+                margin-top: 8px;
+
+                .desc {
+                    font-size: 12rem;
+                }
+                .tit {
+                    font-size: 16rem;
+                }
+            }
+        }
+    }
+
+    .swiper-slide-prev {
+        .item {
+            transform-origin: top right;
+        }
+    }
+
+    .swiper-slide-next {
+        .item {
+            transform-origin: top left;
+        }
+    }
+
+    .swiper-slide-active {
+        .item {
+            transform: scale(1);
+        }
+    }
+
+    @include mq('desktop') {
+        .swiper-slide {
+            width: 550px;
+        }
+
+        .item {
+            transform: scale(0.4);
+
+            .btmsld-fig {
+                .i-img {
+                    border-radius: 24px;
+                }
+
+                figcaption {
+                    margin-top: 15px;
+
+                    .desc {
+                        font-size: 18rem;
+                    }
+                    .tit {
+                        font-size: 26rem;
+                    }
+                }
+            }
+        }
+    }
+}
