@@ -79,7 +79,7 @@
 }
 
 .location {
-    background-color: $black2;
+    background-color: $black3;
 
     .loca-inner {
         display: flex;
@@ -116,7 +116,7 @@
             line-height: 26px;
 
             option {
-                background-color: $black2;
+                background-color: $black3;
             }
         }
         &::after {
@@ -156,7 +156,7 @@
         .loc-desk {
             display: flex;
             flex: 1;
-            justify-content: center;
+            justify-content: flex-end;
 
             & > li {
                 & + li {
@@ -178,6 +178,134 @@
                         color: $white;
                     }
                 }
+            }
+        }
+    }
+}
+
+.sect-dark {
+    color: $white;
+    background-color: $black4;
+}
+
+.sect-inner1 {
+    padding: 30px 30px 35px;
+
+    @include mq('desktop') {
+        width: 1140px;
+        padding: 65px 0 70px;
+        margin: auto;
+    }
+}
+
+.sect-tit1 {
+    margin-bottom: 12px;
+    font-size: 22rem;
+    font-weight: 900;
+    color: $color-primary;
+    text-align: center;
+
+    @include mq('desktop') {
+        margin-bottom: 35px;
+        font-size: 40rem;
+    }
+}
+
+.small-tit1 {
+    margin-bottom: 12px;
+    font-size: 20rem;
+
+    @include mq('desktop') {
+        margin-bottom: 35px;
+        font-size: 34rem;
+    }
+}
+
+.flex-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & > li {
+        flex: 0 (374 / 580) * 100%;
+        max-width: 374px;
+        margin: 0 15px 30px;
+    }
+
+    .fig1 {
+        .item-img {
+            width: calc(262 / 374) * 100%;
+            max-width: 262px;
+            margin: auto;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        figcaption {
+            position: relative;
+            margin-top: 15px;
+            padding-top: 12px;
+            font-size: 14rem;
+            font-weight: 300;
+            text-align: center;
+            border-top: 1px solid $white;
+        }
+    }
+
+    @include mq('desktop') {
+        justify-content: space-between;
+
+        & > li {
+            margin: 0 0 75px;
+            max-width: 301px;
+
+            .fig1 {
+                figcaption {
+                    margin-top: 40px;
+                    padding-top: 16px;
+                    font-size: 20rem;
+                    letter-spacing: -0.8px;
+                }
+            }
+        }
+    }
+}
+
+.word-list1 {
+    & > li {
+        display: flex;
+        margin-top: 16px;
+        justify-content: left;
+
+        strong {
+            flex: 0;
+            margin-right: 5px;
+            white-space: nowrap;
+            font-size: 16rem;
+        }
+
+        span {
+            flex: 0 auto;
+            font-size: 12rem;
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    @include mq('desktop') {
+        & > li {
+            align-items: flex-end;
+
+            strong {
+                font-size: 28rem;
+            }
+
+            span {
+                font-size: 20px;
             }
         }
     }

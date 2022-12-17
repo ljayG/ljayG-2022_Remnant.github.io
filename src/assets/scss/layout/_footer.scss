@@ -103,4 +103,29 @@
             }
         }
     }
+
+    .btntop {
+        display: none;
+
+        @include mq('desktop') {
+            display: block;
+            position: absolute;
+            width: 46px;
+            height: 46px;
+            top: 30px;
+            right: 0;
+            background: url('../images/common/btn_top.png') no-repeat;
+            background-size: contain;
+
+            span {
+                @include ir();
+                display: block;
+            }
+        }
+    }
+}
+
+.foot-dark {
+    background-color: $black4;
+    color: $gray5;
 }

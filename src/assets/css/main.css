@@ -1023,6 +1023,31 @@ legend,
     margin-left: 10px;
   }
 }
+.foot-inner .btntop {
+  display: none;
+}
+@media screen and (min-width: 1120px) {
+  .foot-inner .btntop {
+    display: block;
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    top: 30px;
+    right: 0;
+    background: url("../images/common/btn_top.png") no-repeat;
+    background-size: contain;
+  }
+  .foot-inner .btntop span {
+    font-size: 1rem;
+    text-indent: -999999rem;
+    display: block;
+  }
+}
+
+.foot-dark {
+  background-color: #121212;
+  color: #888;
+}
 
 .main-viswrap {
   height: calc(100vh - 42px);

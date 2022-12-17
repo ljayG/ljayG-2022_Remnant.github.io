@@ -93,4 +93,17 @@ function gnbMenu() {
     $('.header .gnb .menu>li').removeClass('over');
     $('.header .gnb .menu').removeClass('over');
   });
+
+  // scroll body to 0px on click
+  $('#btnTop').bind('click', function (e) {
+    // Prevents the default action to be triggered.
+    e.preventDefault();
+
+    $('body,html').animate(
+      {
+        scrollTop: 0,
+      },
+      500,
+    );
+  });
 }
