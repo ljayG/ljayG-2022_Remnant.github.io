@@ -1044,7 +1044,7 @@ legend,
   }
 }
 
-.foot-dark {
+#wrapper[data-theme=dark] #footer {
   background-color: #121212;
   color: #888;
 }

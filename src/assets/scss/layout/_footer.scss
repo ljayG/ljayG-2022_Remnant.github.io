@@ -125,7 +125,7 @@
     }
 }
 
-.foot-dark {
+#wrapper[data-theme='dark'] #footer {
     background-color: $black4;
     color: $gray5;
 }

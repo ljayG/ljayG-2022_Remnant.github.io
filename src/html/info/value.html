@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no" />
     <link href="../../img/common/favicon.ico" rel="shrtcut icon" />
     <link href="../../img/common/favicon.png" rel="apple-touch-icon-precomposed" />
-    <!-- 메인에만 적용 -->
+    <!-- 서브페이지 적용 -->
     <link rel="stylesheet" href="../../assets/css/style.css" />
 
     <script src="../../assets/js/lib/jquery-3.6.1.min.js"></script>
@@ -22,7 +22,10 @@
       <a href="#contents">본문 바로가기</a>
     </div>
     <!--// 스킵네비게이션 영역(e) -->
-    <div id="wrapper">
+    <!--
+      data-theme="dark" 추가 시 footer영역 dakr로 변함
+    -->
+    <div id="wrapper" data-theme="dark">
       <!-- Header area(s) -->
       <header id="header">
         <h1 class="logo">
@@ -440,7 +443,7 @@
       </main>
       <!--// contents area(e) -->
       <!-- footer area(s)-->
-      <footer id="footer" class="foot-dark">
+      <footer id="footer">
         <div class="foot-inner">
           <h5 class="footlogo"><span>REMNANT</span></h5>
           <address>
