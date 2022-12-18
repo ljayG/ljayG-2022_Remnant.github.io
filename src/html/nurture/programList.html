@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
-    <title>핵심가치 &gt; 램넌트 소개 | 램넌트청년국</title>
+    <title>목록 &gt; 양육프로그램 &gt; 양육 | 램넌트청년국</title>
     <meta name="format-detection" content="telephone=no" />
     <link href="../../img/common/favicon.ico" rel="shrtcut icon" />
     <link href="../../img/common/favicon.png" rel="apple-touch-icon-precomposed" />
@@ -25,7 +25,7 @@
     <!--
       data-theme="dark" 추가 시 footer영역 dark로 변함
     -->
-    <div id="wrapper" data-theme="dark">
+    <div id="wrapper" data-theme="">
       <!-- Header area(s) -->
       <header id="header">
         <h1 class="logo">
@@ -63,7 +63,7 @@
                   </li>
                 </ul>
               </li>
-              <li>
+              <li class="current">
                 <div class="depalpha">
                   <a href="#"><strong>양육</strong></a>
                 </div>
@@ -168,7 +168,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="current">
+              <li>
                 <div class="depalpha">
                   <a href="#"><strong>램넌트 소개</strong></a>
                 </div>
@@ -225,11 +225,11 @@
                 </li>
               </ul>
             </li>
-            <li aria-expanded="false">
+            <li class="active" aria-expanded="true">
               <div class="depalpha">
                 <a href="#"><strong>양육</strong></a>
               </div>
-              <ul class="depth2" style="display: none">
+              <ul class="depth2">
                 <li>
                   <a href="#"><span>양육 프로그램</span></a>
                 </li>
@@ -330,11 +330,11 @@
                 </li>
               </ul>
             </li>
-            <li class="active" aria-expanded="true">
+            <li aria-expanded="false">
               <div class="depalpha">
                 <a href="#"><strong>램넌트 소개</strong></a>
               </div>
-              <ul class="depth2">
+              <ul class="depth2" style="display: none">
                 <li>
                   <a href="#"><span>3대 핵심가치</span></a>
                 </li>
@@ -362,14 +362,9 @@
       <!-- contents area(s) -->
       <main id="contents">
         <!-- 서브 비주얼 영역(s) -->
-        <section class="subvisual subvis-value">
+        <section class="subvisual subvis-program">
           <div class="subv-wrap">
-            <h3 class="title">핵심가치</h3>
-            <div class="desc">
-              <span>예배</span>
-              <span>양육훈련</span>
-              <span>선교</span>
-            </div>
+            <h3 class="title">양육프로그램</h3>
           </div>
         </section>
         <!--// 서브 비주얼 영역(e) -->
@@ -382,60 +377,116 @@
             <div class="loc-mob">
               <label for="mobileLocation" class="blind">서브메뉴선택</label>
               <select id="mobileLocation" class="sele">
-                <option value="" selected>3대 핵심가치</option>
-                <option value="">청년국 공동체 고백</option>
-                <option value="">2023 비전선포</option>
-                <option value="">공동체소개</option>
-                <option value="">사역조직</option>
+                <option value="" selected>양육 프로그램</option>
+                <option value="">2023년 양육 안내</option>
+                <option value="">양육신청</option>
               </select>
             </div>
             <ul class="loc-desk">
-              <li class="current"><a href="#">3대 핵심가치</a></li>
-              <li><a href="#">청년국 공동체 고백</a></li>
-              <li><a href="#">2023 비전선포</a></li>
-              <li><a href="#">공동체소개</a></li>
-              <li><a href="#">사역조직</a></li>
+              <li class="current"><a href="#">양육 프로그램</a></li>
+              <li><a href="#">2023년 양육 안내</a></li>
+              <li><a href="#">양육신청</a></li>
             </ul>
           </div>
         </section>
         <!--// location Area(e) -->
-        <section class="sect-dark">
+        <section class="sect">
           <div class="sect-inner1">
-            <h3 class="sect-tit1">청년국 3대 핵심가치</h3>
-            <ul class="flex-list">
+            <h3 class="sect-tit1">양육프로그램</h3>
+            <ul class="thumb-list">
               <li>
-                <figure class="fig1">
-                  <div class="item-img"><img src="../../assets/images/sub/img_value1.png" alt="예배(Worship)" /></div>
-                  <figcaption>하나님의 임재가 충만한 예배공동체</figcaption>
-                </figure>
+                <a href="#">
+                  <figure class="thumfig">
+                    <div class="thumb"><img src="../../assets/images/temp/thumb01.jpg" alt="" /></div>
+                    <figcaption>
+                      <h4 class="tit">D형 큐티 세미나</h4>
+                      <p class="desc">홍길동 목사</p>
+                    </figcaption>
+                  </figure>
+                </a>
               </li>
               <li>
-                <figure class="fig1">
-                  <div class="item-img"><img src="../../assets/images/sub/img_value2.png" alt="양육훈련(Training)" /></div>
-                  <figcaption>영향력 있는 사람을 세우는 훈련공동체</figcaption>
-                </figure>
+                <a href="#">
+                  <figure class="thumfig">
+                    <div class="thumb"><img src="../../assets/images/temp/thumb02.jpg" alt="" /></div>
+                    <figcaption>
+                      <h4 class="tit">기본교리교육</h4>
+                      <p class="desc">홍길동 목사</p>
+                    </figcaption>
+                  </figure>
+                </a>
               </li>
               <li>
-                <figure class="fig1">
-                  <div class="item-img"><img src="../../assets/images/sub/img_value3.png" alt="선교(Mission)" /></div>
-                  <figcaption>주의 오실 길을 예비하는 선교공동체</figcaption>
-                </figure>
-              </li>
-            </ul>
-
-            <h4 class="small-tit1">청년국 공동체 고백</h4>
-            <ul class="word-list1">
-              <li>
-                <strong>#하나,</strong>
-                <span>우리는 어떤 상황 속에서도 하나님만을 신뢰하며 예배하는 남은 자(Remnant)이다.</span>
-              </li>
-              <li>
-                <strong>#둘,</strong>
-                <span>우리는 양육과 훈련을 통해 하나님을 더욱 깊이 체험하며 살아가는 남은 자 (Remnant)이다.</span>
+                <a href="#">
+                  <figure class="thumfig">
+                    <div class="thumb">
+                      <!-- 이미지 없을경우 노이지미 노출-->
+                      <img src="../../assets/images/temp/thumb03.jpg" alt="" />
+                    </div>
+                    <figcaption>
+                      <h4 class="tit">심플한 -구약,신약의 파노라마(각 4주)</h4>
+                      <p class="desc">홍길동 목사</p>
+                    </figcaption>
+                  </figure>
+                </a>
               </li>
               <li>
-                <strong>#셋,</strong>
-                <span>우리는 통일한국 시대를 준비하며 선교적인 삶을 살아가는 남은 자(Remnant)이다.</span>
+                <a href="#">
+                  <figure class="thumfig">
+                    <div class="thumb">
+                      <!-- 이미지 없을경우 노이지미 노출-->
+                      <img src="../../assets/images/temp/img_blank.png" alt="" />
+                    </div>
+                    <figcaption>
+                      <h4 class="tit">재미있는 성지이야기</h4>
+                      <p class="desc">홍길동 목사</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure class="thumfig">
+                    <div class="thumb"><img src="../../assets/images/temp/thumb02.jpg" alt="" /></div>
+                    <figcaption>
+                      <h4 class="tit">O.D.M (Original Design Ministry)</h4>
+                      <p class="desc">홍길동 목사</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure class="thumfig">
+                    <div class="thumb"><img src="../../assets/images/temp/thumb01.jpg" alt="" /></div>
+                    <figcaption>
+                      <h4 class="tit">피플퍼즐</h4>
+                      <p class="desc">홍길동 목사</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure class="thumfig">
+                    <div class="thumb"><img src="../../assets/images/temp/thumb03.jpg" alt="" /></div>
+                    <figcaption>
+                      <h4 class="tit">크리스천 리더십</h4>
+                      <p class="desc">홍길동 목사</p>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure class="thumfig">
+                    <div class="thumb"><img src="../../assets/images/temp/thumb02.jpg" alt="" /></div>
+                    <figcaption>
+                      <h4 class="tit">요한복음 산책</h4>
+                      <p class="desc">홍길동 목사</p>
+                    </figcaption>
+                  </figure>
+                </a>
               </li>
             </ul>
           </div>

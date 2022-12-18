@@ -438,6 +438,10 @@ legend,
   clear: both;
 }
 
+img {
+  width: 100%;
+}
+
 @-webkit-keyframes backLoop {
   0% {
     background-position: 100% 50%;
@@ -1057,6 +1061,9 @@ legend,
   background-position: center;
   background-size: cover;
 }
+.subvisual.subvis-program {
+  background-image: url("../images/sub/vis_program.jpg");
+}
 .subvisual.subvis-value {
   background-image: url("../images/sub/vis_value.jpg");
 }
@@ -1293,9 +1300,6 @@ legend,
   max-width: 262px;
   margin: auto;
 }
-.flex-list .fig1 .item-img img {
-  width: 100%;
-}
 .flex-list .fig1 figcaption {
   position: relative;
   margin-top: 15px;
@@ -1360,5 +1364,66 @@ legend,
   }
   .word-list1 > li span {
     font-size: 20px;
+  }
+}
+
+.thumb-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.thumb-list > li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 46.9724770642%;
+          flex: 0 46.9724770642%;
+  max-width: 256px;
+  margin-bottom: 20px;
+}
+.thumb-list > li > a {
+  display: block;
+}
+.thumb-list .thumfig .thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #444;
+}
+.thumb-list .thumfig figcaption {
+  margin-top: 8px;
+}
+.thumb-list .thumfig figcaption .tit {
+  color: #005bab;
+  font-weight: 700;
+  font-size: 14rem;
+}
+.thumb-list .thumfig figcaption .desc {
+  font-size: 12rem;
+}
+@media screen and (min-width: 1120px) {
+  .thumb-list > li {
+    margin-bottom: 60px;
+  }
+  .thumb-list > li > a:hover .thumfig .thumb img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .thumb-list .thumfig .thumb {
+    border-radius: 24px;
+  }
+  .thumb-list .thumfig .thumb img {
+    -webkit-transition: 2s all linear;
+    transition: 2s all linear;
+  }
+  .thumb-list .thumfig figcaption .tit {
+    font-size: 22rem;
+    line-height: 1.3;
+  }
+  .thumb-list .thumfig figcaption .desc {
+    font-size: 18rem;
   }
 }

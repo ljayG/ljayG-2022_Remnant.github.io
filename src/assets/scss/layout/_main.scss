@@ -436,10 +436,6 @@
             border-radius: 12px;
             overflow: hidden;
 
-            img {
-                width: 100%;
-            }
-
             .movie-play {
                 position: absolute;
                 width: 36px;
@@ -498,10 +494,6 @@
             position: relative;
             border-radius: 12px;
             overflow: hidden;
-
-            img {
-                width: 100%;
-            }
 
             .intext {
                 position: absolute;
@@ -695,10 +687,6 @@
         .item-img {
             border-radius: 12px;
             overflow: hidden;
-
-            img {
-                width: 100%;
-            }
         }
 
         figcaption {
@@ -748,12 +736,6 @@
 
 .main-thumbitem3 {
     .ma-imgfig {
-        .item-img {
-            img {
-                width: 100%;
-            }
-        }
-
         figcaption {
             margin-top: 8px;
 
