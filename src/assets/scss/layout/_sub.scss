@@ -224,6 +224,21 @@
     }
 }
 
+.article-tit1 {
+    margin-bottom: 12px;
+    font-size: 20rem;
+    font-weight: 900;
+
+    @include mq('desktop') {
+        margin-bottom: 35px;
+        font-size: 40rem;
+    }
+
+    @at-root .sect-dark & {
+        color: $white;
+    }
+}
+
 .flex-list {
     display: flex;
     flex-wrap: wrap;

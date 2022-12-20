@@ -1278,6 +1278,21 @@ img {
   }
 }
 
+.article-tit1 {
+  margin-bottom: 12px;
+  font-size: 20rem;
+  font-weight: 900;
+}
+@media screen and (min-width: 1120px) {
+  .article-tit1 {
+    margin-bottom: 35px;
+    font-size: 40rem;
+  }
+}
+.sect-dark .article-tit1 {
+  color: #fff;
+}
+
 .flex-list {
   display: -webkit-box;
   display: -ms-flexbox;
