@@ -400,3 +400,80 @@
         }
     }
 }
+
+.artiwrap {
+    .arti-fig {
+        border-radius: 12px;
+        overflow: hidden;
+
+        @include mq('desktop') {
+            border-radius: 24px;
+        }
+    }
+
+    .arti-desc {
+        margin-top: 20px;
+    }
+
+    .arti-btnwrap {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $white;
+
+        .btn {
+            flex: 0 48%;
+        }
+    }
+
+    .arti-text,
+    .arti-date {
+        color: $white;
+        font-size: 14rem;
+    }
+
+    .arti-text + .arti-date {
+        margin-top: 15px;
+    }
+
+    @include mq('desktop') {
+        display: flex;
+        justify-content: space-between;
+
+        .arti-fig {
+            flex: 0 457px;
+        }
+
+        .arti-desc {
+            flex: 1 calc(100% - 417px);
+            max-width: 643px;
+            margin-top: 0;
+        }
+
+        .arti-btnwrap {
+            justify-content: flex-end;
+            padding-bottom: 56px;
+            margin-bottom: 30px;
+
+            .btn {
+                flex: 0 auto;
+                display: inline-block;
+                min-width: 252px;
+
+                & + .btn {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .arti-text,
+        .arti-date {
+            font-size: 20rem;
+        }
+
+        .arti-text + .arti-date {
+            margin-top: 25px;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.btn {
+    display: inline-block;
+    height: 30px;
+    padding: 0 10px;
+    font-weight: 700;
+    font-size: 12rem;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid $gray;
+    border-radius: 15px;
+
+    @include mq('desktop') {
+        height: 60px;
+        line-height: 60px;
+        font-size: 20rem;
+        border-radius: 30px;
+    }
+
+    &.clr-2 {
+        color: $color-secondary;
+        border-color: $color-secondary;
+
+        &.bt-arr::after {
+            content: '';
+            display: inline-block;
+            width: 9px;
+            height: 7px;
+            margin-left: 4px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../images/common/ico_arr2.png');
+
+            @include mq('desktop') {
+                width: 17px;
+                height: 13px;
+            }
+        }
+    }
+
+    &.clr-on2 {
+        color: $black;
+        background-color: $color-secondary;
+        border-color: $color-secondary;
+
+        &.bt-arr::after {
+            content: '';
+            display: inline-block;
+            width: 9px;
+            height: 7px;
+            margin-left: 4px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../images/common/ico_arr2_on.png');
+
+            @include mq('desktop') {
+                width: 17px;
+                height: 13px;
+            }
+        }
+    }
+
+    span {
+        display: inline-block;
+    }
+}

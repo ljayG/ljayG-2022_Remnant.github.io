@@ -1,0 +1,54 @@
+.dllist {
+    margin-top: 25px;
+
+    & > dt {
+        padding-bottom: 10px;
+        margin-bottom: 12px;
+        color: $black4;
+        font-weight: 700;
+        font-size: 18rem;
+        border-bottom: 1px solid $gray2;
+    }
+
+    & > dd {
+        position: relative;
+        padding-left: 10px;
+        font-size: 14px;
+        margin-top: 5px;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 6px;
+            height: 1px;
+            top: 8px;
+            left: 0;
+            background-color: $color-default;
+        }
+    }
+
+    @include mq('desktop') {
+        margin-top: 65px;
+
+        & > dt {
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            font-size: 32rem;
+        }
+
+        & > dd {
+            padding-left: 12px;
+            font-size: 20px;
+            margin-top: 8px;
+
+            &::before {
+                top: 14px;
+            }
+        }
+    }
+}

@@ -1053,6 +1053,119 @@ img {
   color: #888;
 }
 
+.btn {
+  display: inline-block;
+  height: 30px;
+  padding: 0 10px;
+  font-weight: 700;
+  font-size: 12rem;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #a8a8b8;
+  border-radius: 15px;
+}
+@media screen and (min-width: 1120px) {
+  .btn {
+    height: 60px;
+    line-height: 60px;
+    font-size: 20rem;
+    border-radius: 30px;
+  }
+}
+.btn.clr-2 {
+  color: #f9b43a;
+  border-color: #f9b43a;
+}
+.btn.clr-2.bt-arr::after {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 7px;
+  margin-left: 4px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/common/ico_arr2.png");
+}
+@media screen and (min-width: 1120px) {
+  .btn.clr-2.bt-arr::after {
+    width: 17px;
+    height: 13px;
+  }
+}
+.btn.clr-on2 {
+  color: #000;
+  background-color: #f9b43a;
+  border-color: #f9b43a;
+}
+.btn.clr-on2.bt-arr::after {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 7px;
+  margin-left: 4px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/common/ico_arr2_on.png");
+}
+@media screen and (min-width: 1120px) {
+  .btn.clr-on2.bt-arr::after {
+    width: 17px;
+    height: 13px;
+  }
+}
+.btn span {
+  display: inline-block;
+}
+
+.dllist {
+  margin-top: 25px;
+}
+.dllist > dt {
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+  color: #121212;
+  font-weight: 700;
+  font-size: 18rem;
+  border-bottom: 1px solid #dedce5;
+}
+.dllist > dd {
+  position: relative;
+  padding-left: 10px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.dllist > dd:first-of-type {
+  margin-top: 0;
+}
+.dllist > dd::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 1px;
+  top: 8px;
+  left: 0;
+  background-color: #444;
+}
+@media screen and (min-width: 1120px) {
+  .dllist {
+    margin-top: 65px;
+  }
+  .dllist > dt {
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 32rem;
+  }
+  .dllist > dd {
+    padding-left: 12px;
+    font-size: 20px;
+    margin-top: 8px;
+  }
+  .dllist > dd::before {
+    top: 14px;
+  }
+}
+
 .subvisual {
   position: relative;
   margin-top: 42px;
@@ -1440,5 +1553,88 @@ img {
   }
   .thumb-list .thumfig figcaption .desc {
     font-size: 18rem;
+  }
+}
+
+.artiwrap .arti-fig {
+  border-radius: 12px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1120px) {
+  .artiwrap .arti-fig {
+    border-radius: 24px;
+  }
+}
+.artiwrap .arti-desc {
+  margin-top: 20px;
+}
+.artiwrap .arti-btnwrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #fff;
+}
+.artiwrap .arti-btnwrap .btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 48%;
+          flex: 0 48%;
+}
+.artiwrap .arti-text,
+.artiwrap .arti-date {
+  color: #fff;
+  font-size: 14rem;
+}
+.artiwrap .arti-text + .arti-date {
+  margin-top: 15px;
+}
+@media screen and (min-width: 1120px) {
+  .artiwrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .artiwrap .arti-fig {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 457px;
+            flex: 0 457px;
+  }
+  .artiwrap .arti-desc {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 calc(100% - 417px);
+            flex: 1 calc(100% - 417px);
+    max-width: 643px;
+    margin-top: 0;
+  }
+  .artiwrap .arti-btnwrap {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-bottom: 56px;
+    margin-bottom: 30px;
+  }
+  .artiwrap .arti-btnwrap .btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 auto;
+            flex: 0 auto;
+    display: inline-block;
+    min-width: 252px;
+  }
+  .artiwrap .arti-btnwrap .btn + .btn {
+    margin-left: 20px;
+  }
+  .artiwrap .arti-text,
+.artiwrap .arti-date {
+    font-size: 20rem;
+  }
+  .artiwrap .arti-text + .arti-date {
+    margin-top: 25px;
   }
 }
