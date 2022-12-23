@@ -1180,6 +1180,9 @@ img {
 .subvisual.subvis-value {
   background-image: url("../images/sub/vis_value.jpg");
 }
+.subvisual.subvis-newsroom {
+  background-image: url("../images/sub/vis_newsroom.jpg");
+}
 .subvisual .subv-wrap {
   position: absolute;
   top: 50%;
@@ -1811,11 +1814,22 @@ img {
 .paging .btn-next {
   width: 30px;
   height: 30px;
+  overflow: hidden;
 }
 .paging .btn-prev span,
 .paging .btn-next span {
   font-size: 1rem;
   text-indent: -999999rem;
+  display: block;
+  width: 9px;
+  height: 13px;
+  margin: 10px auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.paging .btn-prev.off,
+.paging .btn-next.off {
+  opacity: 0.5;
 }
 .paging .page {
   display: -webkit-box;
@@ -1843,8 +1857,14 @@ img {
 .paging .page .btn-prev {
   margin-right: 10px;
 }
+.paging .page .btn-prev span {
+  background-image: url("../images/common/page_prev.png");
+}
 .paging .page .btn-next {
   margin-left: 10px;
+}
+.paging .page .btn-next span {
+  background-image: url("../images/common/page_next.png");
 }
 @media screen and (min-width: 1120px) {
   .paging {
