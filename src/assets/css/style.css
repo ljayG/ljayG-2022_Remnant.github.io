@@ -1638,3 +1638,233 @@ img {
     margin-top: 25px;
   }
 }
+
+.search_area {
+  position: relative;
+  height: 32px;
+  margin-bottom: 30px;
+}
+.search_area fieldset {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+}
+.search_area .inp-search {
+  width: 100%;
+  padding: 0 40px 0 15px;
+  line-height: 30px;
+  border: 1px solid #cecedc;
+  border-radius: 16px;
+  background-color: #f7f7fc;
+}
+.search_area button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  right: 12px;
+  overflow: hidden;
+}
+.search_area button span {
+  font-size: 1rem;
+  text-indent: -999999rem;
+  display: block;
+  width: 17px;
+  height: 19px;
+  margin: 6px auto;
+  background: url("../images/common/ico_search.svg") no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 1120px) {
+  .search_area {
+    max-width: 432px;
+    height: 46px;
+    margin: 0 0 48px auto;
+  }
+  .search_area .inp-search {
+    padding: 0 40px 0 30px;
+    line-height: 44px;
+    border-radius: 23px;
+  }
+  .search_area button {
+    width: 44px;
+    height: 44px;
+  }
+  .search_area button span {
+    margin: 12px auto;
+  }
+}
+
+.brdlist > li {
+  border: 1px solid #dedce5;
+  margin-top: 12px;
+}
+.brdlist > li > a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.brdlist > li:first-of-type {
+  margin-top: 0;
+}
+@media screen and (min-width: 1120px) {
+  .brdlist > li {
+    margin-top: 24px;
+  }
+}
+.brdlist .imgthumb {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 170px;
+          flex: 0 170px;
+}
+.brdlist .imgthumb img {
+  width: 100%;
+}
+.brdlist .brd-desc {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 calc(100% - 196px);
+          flex: 0 calc(100% - 196px);
+  width: calc(100% - 196px);
+  padding: 10px 10px 10px 0;
+  margin-left: 20px;
+}
+.brdlist .brd-desc .tit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16rem;
+  font-weight: 700;
+  color: #222;
+}
+.brdlist .brd-desc .date {
+  margin-top: 5px;
+  font-size: 12rem;
+  font-weight: 300;
+  color: #222;
+}
+.brdlist .brd-desc .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 5px;
+}
+.brdlist .brd-desc .tag span {
+  padding: 0 10px;
+  margin: 3px 10px 3px 0;
+  border: 1px solid #cecedc;
+  border-radius: 8px;
+  font-size: 11rem;
+}
+.brdlist .brd-desc .tag span.light {
+  border-color: #f9b43a;
+}
+@media screen and (min-width: 1120px) {
+  .brdlist .imgthumb {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 353px;
+            flex: 0 353px;
+  }
+  .brdlist .brd-desc {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 calc(100% - 393px);
+            flex: 0 calc(100% - 393px);
+    width: calc(100% - 393px);
+    padding: 20px 20px 20px 0;
+    margin-left: 40px;
+  }
+  .brdlist .brd-desc .tit {
+    font-size: 26rem;
+  }
+  .brdlist .brd-desc .date {
+    margin-top: 10px;
+    font-size: 20rem;
+  }
+  .brdlist .brd-desc .tag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .brdlist .brd-desc .tag span {
+    padding: 0 15px;
+    margin: 5px 15px 5px 0;
+    border-radius: 12px;
+    font-size: 18rem;
+  }
+}
+
+.paging {
+  margin-top: 35px;
+}
+.paging .btn-prev,
+.paging .btn-next {
+  width: 30px;
+  height: 30px;
+}
+.paging .btn-prev span,
+.paging .btn-next span {
+  font-size: 1rem;
+  text-indent: -999999rem;
+}
+.paging .page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.paging .page a {
+  width: 30px;
+  height: 30px;
+  color: #222;
+  font-size: 14rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 30px;
+}
+.paging .page a.current {
+  color: #fff;
+  background-color: #f9b43a;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.paging .page .btn-prev {
+  margin-right: 10px;
+}
+.paging .page .btn-next {
+  margin-left: 10px;
+}
+@media screen and (min-width: 1120px) {
+  .paging {
+    margin-top: 72px;
+  }
+  .paging .btn-prev,
+.paging .btn-next {
+    width: 40px;
+    height: 40px;
+  }
+  .paging .page a {
+    width: 40px;
+    height: 40px;
+    font-size: 24rem;
+    line-height: 40px;
+  }
+  .paging .page .btn-prev {
+    margin-right: 15px;
+  }
+  .paging .page .btn-next {
+    margin-left: 15px;
+  }
+}

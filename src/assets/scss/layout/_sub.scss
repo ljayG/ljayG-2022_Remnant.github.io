@@ -245,7 +245,7 @@
     justify-content: center;
 
     & > li {
-        flex: 0 (374 / 580) * 100%;
+        flex: 0 calc(374 / 580) * 100%;
         max-width: 374px;
         margin: 0 15px 30px;
     }
@@ -474,6 +474,245 @@
 
         .arti-text + .arti-date {
             margin-top: 25px;
+        }
+    }
+}
+
+.search_area {
+    position: relative;
+    height: 32px;
+    margin-bottom: 30px;
+
+    fieldset {
+        @include blind();
+    }
+
+    .inp-search {
+        width: 100%;
+        padding: 0 40px 0 15px;
+        line-height: 30px;
+        border: 1px solid $gray3;
+        border-radius: 16px;
+        background-color: $lightGray2;
+    }
+
+    button {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 12px;
+        overflow: hidden;
+
+        span {
+            @include ir();
+            display: block;
+            width: 17px;
+            height: 19px;
+            margin: 6px auto;
+            background: url('../images/common/ico_search.svg') no-repeat;
+            background-size: contain;
+        }
+    }
+
+    @include mq('desktop') {
+        max-width: 432px;
+        height: 46px;
+        margin: 0 0 48px auto;
+
+        .inp-search {
+            padding: 0 40px 0 30px;
+            line-height: 44px;
+            border-radius: 23px;
+        }
+
+        button {
+            width: 44px;
+            height: 44px;
+
+            span {
+                margin: 12px auto;
+            }
+        }
+    }
+}
+
+.brdlist {
+    & > li {
+        border: 1px solid $gray2;
+        margin-top: 12px;
+
+        & > a {
+            display: block;
+            display: flex;
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        @include mq('desktop') {
+            margin-top: 24px;
+        }
+    }
+
+    .imgthumb {
+        flex: 0 170px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .brd-desc {
+        flex: 0 calc(100% - 196px);
+        width: calc(100% - 196px);
+        padding: 10px 10px 10px 0;
+        margin-left: 20px;
+
+        .tit {
+            @include ellipsis(1);
+            font-size: 16rem;
+            font-weight: 700;
+            color: $black2;
+        }
+
+        .date {
+            margin-top: 5px;
+            font-size: 12rem;
+            font-weight: 300;
+            color: $black2;
+        }
+
+        .tag {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 5px;
+
+            span {
+                padding: 0 10px;
+                margin: 3px 10px 3px 0;
+                border: 1px solid $gray3;
+                border-radius: 8px;
+                font-size: 11rem;
+
+                &.light {
+                    border-color: $color-secondary;
+                }
+            }
+        }
+    }
+
+    @include mq('desktop') {
+        .imgthumb {
+            flex: 0 353px;
+        }
+
+        .brd-desc {
+            flex: 0 calc(100% - 393px);
+            width: calc(100% - 393px);
+            padding: 20px 20px 20px 0;
+            margin-left: 40px;
+
+            .tit {
+                font-size: 26rem;
+            }
+
+            .date {
+                margin-top: 10px;
+                font-size: 20rem;
+            }
+
+            .tag {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 40px;
+
+                span {
+                    padding: 0 15px;
+                    margin: 5px 15px 5px 0;
+                    border-radius: 12px;
+                    font-size: 18rem;
+                }
+            }
+        }
+    }
+}
+
+.paging {
+    margin-top: 35px;
+
+    .btn-prev,
+    .btn-next {
+        width: 30px;
+        height: 30px;
+
+        span {
+            @include ir();
+            // display: block;
+        }
+    }
+
+    .page {
+        display: flex;
+        justify-content: center;
+
+        a {
+            width: 30px;
+            height: 30px;
+            color: $black2;
+            font-size: 14rem;
+            font-weight: 700;
+            text-align: center;
+            line-height: 30px;
+
+            &.current {
+                color: $white;
+                background-color: $color-secondary;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+        }
+
+        .btn-prev {
+            margin-right: 10px;
+
+            span {
+            }
+        }
+
+        .btn-next {
+            margin-left: 10px;
+
+            span {
+            }
+        }
+    }
+
+    @include mq('desktop') {
+        margin-top: 72px;
+
+        .btn-prev,
+        .btn-next {
+            width: 40px;
+            height: 40px;
+        }
+
+        .page {
+            a {
+                width: 40px;
+                height: 40px;
+                font-size: 24rem;
+                line-height: 40px;
+            }
+
+            .btn-prev {
+                margin-right: 15px;
+            }
+
+            .btn-next {
+                margin-left: 15px;
+            }
         }
     }
 }
