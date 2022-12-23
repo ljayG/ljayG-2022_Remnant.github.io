@@ -1166,6 +1166,133 @@ img {
   }
 }
 
+.brdlist > li {
+  border: 1px solid #dedce5;
+  margin-top: 12px;
+}
+.brdlist > li > a {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.brdlist > li:first-of-type {
+  margin-top: 0;
+}
+@media screen and (min-width: 1120px) {
+  .brdlist > li {
+    margin-top: 24px;
+  }
+}
+.brdlist .imgthumb {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 170px;
+          flex: 0 170px;
+}
+.brdlist .imgthumb img {
+  width: 100%;
+}
+.brdlist .brd-desc {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 calc(100% - 196px);
+          flex: 0 calc(100% - 196px);
+  width: calc(100% - 196px);
+  padding: 10px 10px 10px 0;
+  margin-left: 20px;
+}
+.brdlist .brd-desc .tit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16rem;
+  font-weight: 700;
+  color: #222;
+}
+.brdlist .brd-desc .date {
+  margin-top: 5px;
+  font-size: 12rem;
+  font-weight: 300;
+  color: #222;
+}
+@media screen and (min-width: 1120px) {
+  .brdlist .imgthumb {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 353px;
+            flex: 0 353px;
+  }
+  .brdlist .brd-desc {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 calc(100% - 393px);
+            flex: 0 calc(100% - 393px);
+    width: calc(100% - 393px);
+    padding: 20px 20px 20px 0;
+    margin-left: 40px;
+  }
+  .brdlist .brd-desc .tit {
+    font-size: 26rem;
+  }
+  .brdlist .brd-desc .date {
+    margin-top: 10px;
+    font-size: 20rem;
+  }
+}
+
+.brdlist2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.brdlist2 > li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 30.9649122807%;
+          flex: 0 30.9649122807%;
+  border: 1px solid #dedce5;
+  margin-bottom: 10px;
+}
+.brdlist2 > li > a {
+  display: block;
+}
+.brdlist2 .brd-desc {
+  padding: 12px;
+}
+.brdlist2 .brd-desc .tit {
+  font-size: 14rem;
+  font-weight: 700;
+  color: #222;
+}
+.brdlist2 .brd-desc .date {
+  margin-top: 8px;
+  font-size: 12rem;
+  font-weight: 300;
+  color: #222;
+}
+.brdlist2 .brd-desc .tag-news {
+  margin-top: 5px;
+}
+.brdlist2 .brd-desc .tag-news span {
+  margin-right: 5px;
+}
+@media screen and (min-width: 1120px) {
+  .brdlist2 .brd-desc {
+    padding: 24px;
+  }
+  .brdlist2 .brd-desc .tit {
+    font-size: 20rem;
+  }
+  .brdlist2 .brd-desc .date {
+    margin-top: 20px;
+    font-size: 18rem;
+  }
+  .brdlist2 .brd-desc .tag-news {
+    margin-top: 20px;
+  }
+}
+
 .subvisual {
   position: relative;
   margin-top: 42px;
@@ -1406,6 +1533,21 @@ img {
   }
 }
 .sect-dark .article-tit1 {
+  color: #fff;
+}
+
+.article-tit2 {
+  margin-bottom: 12px;
+  font-size: 18rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 1120px) {
+  .article-tit2 {
+    margin-bottom: 30px;
+    font-size: 30rem;
+  }
+}
+.sect-dark .article-tit2 {
   color: #fff;
 }
 
@@ -1704,109 +1846,6 @@ img {
   }
 }
 
-.brdlist > li {
-  border: 1px solid #dedce5;
-  margin-top: 12px;
-}
-.brdlist > li > a {
-  display: block;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.brdlist > li:first-of-type {
-  margin-top: 0;
-}
-@media screen and (min-width: 1120px) {
-  .brdlist > li {
-    margin-top: 24px;
-  }
-}
-.brdlist .imgthumb {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 170px;
-          flex: 0 170px;
-}
-.brdlist .imgthumb img {
-  width: 100%;
-}
-.brdlist .brd-desc {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 calc(100% - 196px);
-          flex: 0 calc(100% - 196px);
-  width: calc(100% - 196px);
-  padding: 10px 10px 10px 0;
-  margin-left: 20px;
-}
-.brdlist .brd-desc .tit {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 16rem;
-  font-weight: 700;
-  color: #222;
-}
-.brdlist .brd-desc .date {
-  margin-top: 5px;
-  font-size: 12rem;
-  font-weight: 300;
-  color: #222;
-}
-.brdlist .brd-desc .tag {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: 5px;
-}
-.brdlist .brd-desc .tag span {
-  padding: 0 10px;
-  margin: 3px 10px 3px 0;
-  border: 1px solid #cecedc;
-  border-radius: 8px;
-  font-size: 11rem;
-}
-.brdlist .brd-desc .tag span.light {
-  border-color: #f9b43a;
-}
-@media screen and (min-width: 1120px) {
-  .brdlist .imgthumb {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 353px;
-            flex: 0 353px;
-  }
-  .brdlist .brd-desc {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 calc(100% - 393px);
-            flex: 0 calc(100% - 393px);
-    width: calc(100% - 393px);
-    padding: 20px 20px 20px 0;
-    margin-left: 40px;
-  }
-  .brdlist .brd-desc .tit {
-    font-size: 26rem;
-  }
-  .brdlist .brd-desc .date {
-    margin-top: 10px;
-    font-size: 20rem;
-  }
-  .brdlist .brd-desc .tag {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-top: 40px;
-  }
-  .brdlist .brd-desc .tag span {
-    padding: 0 15px;
-    margin: 5px 15px 5px 0;
-    border-radius: 12px;
-    font-size: 18rem;
-  }
-}
-
 .paging {
   margin-top: 35px;
 }
@@ -1886,5 +1925,58 @@ img {
   }
   .paging .page .btn-next {
     margin-left: 15px;
+  }
+}
+
+.tag-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 5px;
+}
+.tag-news span {
+  padding: 0 10px;
+  margin: 3px 10px 3px 0;
+  border: 1px solid #cecedc;
+  border-radius: 8px;
+  font-size: 11rem;
+}
+.sect-dark .tag-news span {
+  color: #fff;
+}
+
+.tag-news span.light {
+  border-color: #f9b43a;
+}
+@media screen and (min-width: 1120px) {
+  .tag-news {
+    margin-top: 40px;
+  }
+  .tag-news span {
+    padding: 0 15px;
+    margin: 5px 15px 5px 0;
+    border-radius: 20px;
+    font-size: 18rem;
+  }
+}
+
+.brdview .vwimg {
+  margin-bottom: 20px;
+}
+.brdview .desc {
+  font-size: 14rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 1120px) {
+  .brdview .vwimg {
+    margin-bottom: 35px;
+  }
+  .brdview .desc {
+    font-size: 20rem;
+  }
+  .brdview .tag-news {
+    margin-top: 25px;
   }
 }
