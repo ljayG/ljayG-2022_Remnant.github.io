@@ -1158,7 +1158,7 @@ img {
   }
   .dllist > dd {
     padding-left: 12px;
-    font-size: 20px;
+    font-size: 20rem;
     margin-top: 8px;
   }
   .dllist > dd::before {
@@ -1293,6 +1293,227 @@ img {
   }
 }
 
+.flex-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.flex-list > li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 64.4827586207%;
+          flex: 0 64.4827586207%;
+  max-width: 374px;
+  margin: 0 15px 30px;
+}
+.flex-list .fig1 .item-img {
+  width: 70.0534759358%;
+  max-width: 262px;
+  margin: auto;
+}
+.flex-list .fig1 figcaption {
+  position: relative;
+  margin-top: 15px;
+  padding-top: 12px;
+  font-size: 14rem;
+  font-weight: 300;
+  text-align: center;
+  border-top: 1px solid #fff;
+}
+@media screen and (min-width: 1120px) {
+  .flex-list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .flex-list > li {
+    margin: 0 0 75px;
+    max-width: 301px;
+  }
+  .flex-list > li .fig1 figcaption {
+    margin-top: 40px;
+    padding-top: 16px;
+    font-size: 20rem;
+    letter-spacing: -0.8px;
+  }
+}
+
+.orglist {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 48px;
+}
+.orglist::before {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: "";
+  width: 8px;
+  height: 20px;
+  top: 0;
+  background: url("../images/sub/cross.png") no-repeat center;
+  background-size: contain;
+}
+.orglist > li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 100%;
+          flex: 0 100%;
+  margin-bottom: 25px;
+}
+.orglist .orgdl {
+  text-align: center;
+  color: #fff;
+}
+.orglist .orgdl dt {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  font-size: 20rem;
+  font-weight: 700;
+  border-bottom: 1px solid #f9b43a;
+}
+.orglist .orgdl dd {
+  font-size: 14rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 1120px) {
+  .orglist {
+    padding-top: 86px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .orglist::before {
+    width: 16px;
+    height: 39px;
+  }
+  .orglist > li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 28.9473684211%;
+            flex: 0 28.9473684211%;
+    margin-bottom: 45px;
+  }
+  .orglist .orgdl dt {
+    margin-bottom: 20px;
+    font-size: 32rem;
+  }
+  .orglist .orgdl dd {
+    font-size: 20rem;
+  }
+}
+
+.word-list1 > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 16px;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+.word-list1 > li strong {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  margin-right: 5px;
+  white-space: nowrap;
+  font-size: 16rem;
+}
+.word-list1 > li span {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 auto;
+          flex: 0 auto;
+  font-size: 12rem;
+}
+.word-list1 > li:first-of-type {
+  margin-top: 0;
+}
+@media screen and (min-width: 1120px) {
+  .word-list1 > li {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .word-list1 > li strong {
+    font-size: 28rem;
+  }
+  .word-list1 > li span {
+    font-size: 20px;
+  }
+}
+
+.thumb-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.thumb-list > li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 46.9724770642%;
+          flex: 0 46.9724770642%;
+  max-width: 256px;
+  margin-bottom: 20px;
+}
+.thumb-list > li > a {
+  display: block;
+}
+.thumb-list .thumfig .thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #444;
+}
+.thumb-list .thumfig figcaption {
+  margin-top: 8px;
+}
+.thumb-list .thumfig figcaption .tit {
+  color: #005bab;
+  font-weight: 700;
+  font-size: 14rem;
+}
+.thumb-list .thumfig figcaption .desc {
+  font-size: 12rem;
+}
+@media screen and (min-width: 1120px) {
+  .thumb-list > li {
+    margin-bottom: 60px;
+  }
+  .thumb-list > li > a:hover .thumfig .thumb img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .thumb-list .thumfig .thumb {
+    border-radius: 24px;
+  }
+  .thumb-list .thumfig .thumb img {
+    -webkit-transition: 2s all linear;
+    transition: 2s all linear;
+  }
+  .thumb-list .thumfig figcaption .tit {
+    font-size: 22rem;
+    line-height: 1.3;
+  }
+  .thumb-list .thumfig figcaption .desc {
+    font-size: 18rem;
+  }
+}
+
 .subvisual {
   position: relative;
   margin-top: 42px;
@@ -1306,6 +1527,9 @@ img {
 }
 .subvisual.subvis-value {
   background-image: url("../images/sub/vis_value.jpg");
+}
+.subvisual.subvis-org {
+  background-image: url("../images/sub/vis_org.jpg");
 }
 .subvisual.subvis-newsroom {
   background-image: url("../images/sub/vis_newsroom.jpg");
@@ -1549,156 +1773,6 @@ img {
 }
 .sect-dark .article-tit2 {
   color: #fff;
-}
-
-.flex-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.flex-list > li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 64.4827586207%;
-          flex: 0 64.4827586207%;
-  max-width: 374px;
-  margin: 0 15px 30px;
-}
-.flex-list .fig1 .item-img {
-  width: 70.0534759358%;
-  max-width: 262px;
-  margin: auto;
-}
-.flex-list .fig1 figcaption {
-  position: relative;
-  margin-top: 15px;
-  padding-top: 12px;
-  font-size: 14rem;
-  font-weight: 300;
-  text-align: center;
-  border-top: 1px solid #fff;
-}
-@media screen and (min-width: 1120px) {
-  .flex-list {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .flex-list > li {
-    margin: 0 0 75px;
-    max-width: 301px;
-  }
-  .flex-list > li .fig1 figcaption {
-    margin-top: 40px;
-    padding-top: 16px;
-    font-size: 20rem;
-    letter-spacing: -0.8px;
-  }
-}
-
-.word-list1 > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 16px;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-}
-.word-list1 > li strong {
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
-  margin-right: 5px;
-  white-space: nowrap;
-  font-size: 16rem;
-}
-.word-list1 > li span {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 auto;
-          flex: 0 auto;
-  font-size: 12rem;
-}
-.word-list1 > li:first-of-type {
-  margin-top: 0;
-}
-@media screen and (min-width: 1120px) {
-  .word-list1 > li {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-  .word-list1 > li strong {
-    font-size: 28rem;
-  }
-  .word-list1 > li span {
-    font-size: 20px;
-  }
-}
-
-.thumb-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.thumb-list > li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 46.9724770642%;
-          flex: 0 46.9724770642%;
-  max-width: 256px;
-  margin-bottom: 20px;
-}
-.thumb-list > li > a {
-  display: block;
-}
-.thumb-list .thumfig .thumb {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  background-color: #444;
-}
-.thumb-list .thumfig figcaption {
-  margin-top: 8px;
-}
-.thumb-list .thumfig figcaption .tit {
-  color: #005bab;
-  font-weight: 700;
-  font-size: 14rem;
-}
-.thumb-list .thumfig figcaption .desc {
-  font-size: 12rem;
-}
-@media screen and (min-width: 1120px) {
-  .thumb-list > li {
-    margin-bottom: 60px;
-  }
-  .thumb-list > li > a:hover .thumfig .thumb img {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  .thumb-list .thumfig .thumb {
-    border-radius: 24px;
-  }
-  .thumb-list .thumfig .thumb img {
-    -webkit-transition: 2s all linear;
-    transition: 2s all linear;
-  }
-  .thumb-list .thumfig figcaption .tit {
-    font-size: 22rem;
-    line-height: 1.3;
-  }
-  .thumb-list .thumfig figcaption .desc {
-    font-size: 18rem;
-  }
 }
 
 .artiwrap .arti-fig {
