@@ -410,3 +410,52 @@
         }
     }
 }
+
+.tbl {
+    table {
+        width: 100%;
+
+        th,
+        td {
+            border-bottom: 1px solid $gray4;
+            border-right: 1px solid $gray4;
+            color: $white;
+            padding: 10px;
+
+            text-align: center;
+            word-break: break-all;
+        }
+
+        tr {
+            th:last-of-type,
+            td:last-of-type {
+                border-right: none;
+            }
+        }
+
+        thead {
+            th {
+                background-color: $blue;
+                font-size: 14rem;
+
+                @include mq('desktop') {
+                    font-size: 22rem;
+                }
+            }
+        }
+
+        tbody {
+            td {
+                font-size: 12rem;
+
+                @include mq('desktop') {
+                    font-size: 20rem;
+                }
+            }
+        }
+
+        tr.clr1 {
+            background-color: rgba($white, 0.15);
+        }
+    }
+}

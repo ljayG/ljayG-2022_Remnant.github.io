@@ -1514,6 +1514,43 @@ img {
   }
 }
 
+.tbl table {
+  width: 100%;
+}
+.tbl table th,
+.tbl table td {
+  border-bottom: 1px solid #7a7a7a;
+  border-right: 1px solid #7a7a7a;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  word-break: break-all;
+}
+.tbl table tr th:last-of-type,
+.tbl table tr td:last-of-type {
+  border-right: none;
+}
+.tbl table thead th {
+  background-color: #2f77c9;
+  font-size: 14rem;
+}
+@media screen and (min-width: 1120px) {
+  .tbl table thead th {
+    font-size: 22rem;
+  }
+}
+.tbl table tbody td {
+  font-size: 12rem;
+}
+@media screen and (min-width: 1120px) {
+  .tbl table tbody td {
+    font-size: 20rem;
+  }
+}
+.tbl table tr.clr1 {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
 .subvisual {
   position: relative;
   margin-top: 42px;
@@ -1530,6 +1567,9 @@ img {
 }
 .subvisual.subvis-org {
   background-image: url("../images/sub/vis_org.jpg");
+}
+.subvisual.subvis-org2 {
+  background-image: url("../images/sub/vis_org2.jpg");
 }
 .subvisual.subvis-newsroom {
   background-image: url("../images/sub/vis_newsroom.jpg");
