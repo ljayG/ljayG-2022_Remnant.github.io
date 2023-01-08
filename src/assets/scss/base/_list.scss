@@ -459,3 +459,58 @@
         }
     }
 }
+
+.itemlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & > li {
+        flex: 0 47.5%;
+        margin-bottom: 25px;
+    }
+
+    .item {
+        .tit {
+            border-top: 2px solid $blue;
+            border-bottom: 1px solid $gray3;
+            color: $color-primary;
+            padding: 7px 0;
+            font-size: 16rem;
+            text-align: center;
+        }
+
+        .item-box {
+            background-color: $lightGray2;
+            padding: 12px 0;
+
+            & > li {
+                color: $black2;
+                font-size: 14rem;
+                text-align: center;
+            }
+        }
+    }
+
+    @include mq('desktop') {
+        & > li {
+            flex-basis: (353/1140) * 100%;
+            margin-bottom: 50px;
+        }
+
+        .item {
+            .tit {
+                padding: 10px 0;
+                font-size: 22rem;
+            }
+
+            .item-box {
+                padding: 20px 0;
+
+                & > li {
+                    font-size: 18rem;
+                }
+            }
+        }
+    }
+}
