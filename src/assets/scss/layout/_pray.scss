@@ -34,16 +34,17 @@ body {
 
         .item {
             padding: 35px;
+            word-break: break-all;
 
             .name {
                 margin-bottom: 20px;
-                font-size: 22rem;
+                font-size: 20rem;
                 font-weight: 700;
                 color: $color-default;
             }
 
             .pray {
-                font-size: 16rem;
+                font-size: 22rem;
             }
         }
     }

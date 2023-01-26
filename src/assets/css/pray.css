@@ -474,15 +474,16 @@ body {
 }
 .pray-slider .swiper-slide .item {
   padding: 35px;
+  word-break: break-all;
 }
 .pray-slider .swiper-slide .item .name {
   margin-bottom: 20px;
-  font-size: 22rem;
+  font-size: 20rem;
   font-weight: 700;
   color: #444;
 }
 .pray-slider .swiper-slide .item .pray {
-  font-size: 16rem;
+  font-size: 22rem;
 }
 .pray-slider .swiper-pagination {
   font-size: 14rem;
