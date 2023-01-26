@@ -1,0 +1,54 @@
+body {
+    height: 100%;
+}
+
+* {
+    font-family: 'Malgun Gothic', '맑은고딕', sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+}
+
+.pray-slider {
+    background: url('../images/pray/bg.jpg') no-repeat center;
+    background-size: cover;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 56px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url('../images/pray/bg_logo.png') no-repeat center;
+        background-size: contain;
+        opacity: 0.5;
+    }
+
+    .swiper-slide {
+        position: relative;
+        min-height: 100vh;
+
+        .item {
+            padding: 35px;
+
+            .name {
+                margin-bottom: 20px;
+                font-size: 22rem;
+                font-weight: 700;
+                color: $color-default;
+            }
+
+            .pray {
+                font-size: 16rem;
+            }
+        }
+    }
+
+    .swiper-pagination {
+        font-size: 14rem;
+    }
+}
